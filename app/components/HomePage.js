@@ -48,9 +48,7 @@ const HomePage = () => {
 
     return (
         <div className={styles.iAmDiv}>
-            <h1>
-                <span className={styles.hi}>Hi. <span className={styles.imConnor}>I'm Connor.</span></span>
-            </h1>
+            <span className={styles.hi}>Hi.<span className={styles.imConnor}>I&apos;m Connor.</span></span>
             <h1 className={currentIntroTextIndex >= 1 ? styles.iAmH1 : "false"} style={{paddingTop: "10%"}}>
                 {currentIntroTextIndex >= 1 && "And I am "}
             </h1>
