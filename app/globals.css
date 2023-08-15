@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
-  background: #FCB900;
+  background: #FDBD4D;
   overflow: hidden;
+  /* F8CB54 */
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;

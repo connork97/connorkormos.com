@@ -1,8 +1,13 @@
+'use client'
+
 import Link from 'next/link';
+import React, { useState } from 'react'
 
 const Navbar = () => {
+  const [titleText, setTitleText] = useState("Hi.")
+
     return (
-        <ul className="flex fixed items-center top-10 space-x-20 font-bold text-5xl">
+        <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
             <li>
                 <Link href='/'>Home</Link>
             </li>

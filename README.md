@@ -1,3 +1,13 @@
+Technologies used for my Portfolio (keep this list running):
+
+Next.js
+React
+HTML
+CSS
+Tailwind CSS
+React Transition Group***
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
