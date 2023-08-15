@@ -51,7 +51,7 @@ const HomePage = () => {
             <h1>
                 <span className={styles.hi}>Hi. <span className={styles.imConnor}>I'm Connor.</span></span>
             </h1>
-            <h1 className={currentIntroTextIndex >= 1 && styles.iAmH1} style={{paddingTop: "10%"}}>
+            <h1 className={currentIntroTextIndex >= 1 ? styles.iAmH1 : "false"} style={{paddingTop: "10%"}}>
                 {currentIntroTextIndex >= 1 && "And I am "}
             </h1>
             <span className={styles.iAmSpan} style={{paddingTop: "15%"}}>{currentIntroTextIndex > 1 && displayedText}</span>
