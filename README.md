@@ -4,7 +4,7 @@ Next.js
 React
 HTML
 CSS
-Tailwind CSS
+Tailwind CSS**
 React Transition Group***
 
 

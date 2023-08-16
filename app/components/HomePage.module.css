@@ -1,16 +1,27 @@
-.hi {
+.iAmDiv {
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    position: absolute;
+    width: 70vw;
+    /* height: 25vh; */
+    overflow: hidden;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.hi {
+    display: flex;
+    text-align: left;
+    position: relative;
     width: 100%;
     margin-top: 2.5%;
     font-size: 3.25rem;
-    text-align: center;
+    line-height: 3rem;
     animation: fadeIn 3s ease forwards;
 }
 
 .imConnor {
     opacity: 0;
-    margin-left: 1rem;
     animation: fadeIn 2s 3s ease forwards;
 }
 
@@ -23,32 +34,27 @@
     }
 }
 
-.iAmDiv {
-    /* display: flex; */
-    width: 100vw;
-    font-weight: bold;
-}
 
 .iAmH1 {
-    position: absolute;
-    margin: auto;
+    display: flex;
+    position: relative;
+    text-align: left;
     width: 100%;
-    padding-top: 10%;
     opacity: 0;
-    text-align: center;
     font-size: 2.75rem;
-    animation: fadeIn 3s 2s ease forwards;
+    line-height: 2rem;
+    animation: fadeIn 3s 6s ease forwards;
     /* left: 50%; */
     /* animation: iAmFadeIn 1.5s forwards; */
 }
 
 .iAmSpan {
-    position: absolute;
     margin: auto;
     width: 100%;
-    padding-top: 10%;
-    text-align: center;
+    height: auto;
+    text-align: left;
     font-size: 2.75rem;
+    line-height: 3rem;
 }
 
 @keyframes iAmFadeIn {

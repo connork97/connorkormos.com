@@ -1,0 +1,23 @@
+.navbarDiv {
+    margin: 5vh auto;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarUl {
+    width: 70%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    font-weight: bold;
+    list-style: none;
+}
+
+.navbarUl li a {
+    text-decoration: none;
+    color: black;
+}

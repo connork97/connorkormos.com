@@ -6,53 +6,62 @@ import styles from './HomePage.module.css';
 
 const HomePage = () => {
 
-    const introText = ["", "", "a Full Stack Web Developer.", "a Software Engineer.", "a critical thinker.", "a team player.", "detail oriented.", "creative.", "results driven.", "a problem solver."]
+    const introText = ["", "a Full Stack Web Developer.", "a Software Engineer.", "a critical thinker.", "a team player.", "detail oriented.", "creative.", "results driven.", "a problem solver."]
     const [currentIntroTextIndex, setCurrentIntroTextIndex] = useState(0)
     const [currentString, setCurrentString] = useState(introText[currentIntroTextIndex])
 
-    const letters = "abcdefghijklmnopqrstuvwxyz"
     const [displayedText, setDisplayedText] = useState(currentString)
+    const [showText, setShowText] = useState(false)
 
     useEffect(() => {
-        setCurrentString(introText[currentIntroTextIndex])
-    }, [currentIntroTextIndex])
-
+        const interval = setInterval(() => {
+            setCurrentIntroTextIndex((prevIndex) => (prevIndex + 1) % introText.length);
+            setCurrentString(introText[currentIntroTextIndex]);
+        }, currentString.length * 100 * 2 + 4000);
+        return () => clearInterval(interval);
+    }, [currentIntroTextIndex]);
+    
     useEffect(() => {
-        runAnimation(currentString)
-    }, [currentString])
+        setTimeout(() => {
+            runAnimation(currentString);
+        }, 1000);
+    }, [currentString, currentIntroTextIndex]);
 
     const runAnimation = (text) => {
-        let iteration = 0
+        let iteration = 0;
+        const totalIterations = text.length * 2 + 20;
+
         const interval = setInterval(() => {
-            const newText = text.split("").map((letter, index) => {
-                if (index < iteration) {
-                    return text[index]
-                }
-                return letters[Math.floor(Math.random() * 26)]
-            }).join("")
+            setShowText(true)
+            let newText;
             
-            setDisplayedText(newText)
-
-            if (iteration >= text.length) clearInterval(interval)
-
-            iteration += 1 / 3
-        }, 40)
-    }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIntroTextIndex((prevIndex) => (prevIndex + 1) % introText.length)
-        }, 5000)
-        return () => clearInterval(interval)
-    })
+            if (iteration < (text.length + 20)) {
+                // Typing animation
+                newText = text.slice(0, iteration + 1);
+            } else {
+                // Backspacing animation
+                newText = text.slice(0, text.length + 20 - (iteration - text.length) - 1);
+            }
+            
+            setDisplayedText(newText);
+            
+            if (iteration >= totalIterations) {
+                clearInterval(interval);
+                setShowText(false)
+            }
+            
+            iteration += 1;
+        }, 100);
+    };
 
     return (
         <div className={styles.iAmDiv}>
-            <span className={styles.hi}>Hi.<span className={styles.imConnor}>I&apos;m Connor.</span></span>
-            <h1 className={currentIntroTextIndex >= 1 ? styles.iAmH1 : "false"} style={{paddingTop: "10%"}}>
-                {currentIntroTextIndex >= 1 && "And I am "}
-            </h1>
-            <span className={styles.iAmSpan} style={{paddingTop: "15%"}}>{currentIntroTextIndex > 1 && displayedText}</span>
+            <span>
+
+            <span className={styles.hi}>Hi. <span className={styles.imConnor}> I&apos;m Connor.</span></span>
+            <h1 className={styles.iAmH1}>And I am...</h1>
+            <span className={styles.iAmSpan}>{currentIntroTextIndex > 1 & showText ? displayedText : null}</span>
+            </span>
         </div>
     )
 }
