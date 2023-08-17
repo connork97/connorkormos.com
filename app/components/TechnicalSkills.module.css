@@ -1,7 +1,13 @@
+.technicalSkillsWrapper {
+    margin-bottom: 100vh;
+}
+
 .technicalSkillsH1 {
     margin-top: 50vh;
     padding-top: 15vh;
     text-align: center;
+    font-size: 7vh;
+    font-weight: bold;
 }
 
 .technicalSkillsDiv {

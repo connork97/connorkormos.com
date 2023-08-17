@@ -1,9 +1,11 @@
 'use client'
 import Image from 'next/image'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useRef } from 'react'
 import HomePageIntro from './components/HomePageIntro'
 import TechnicalSkills from './components/TechnicalSkills'
+import Projects from './components/Projects'
 
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 
@@ -24,6 +26,8 @@ export default function Home() {
           <HomePageIntro />
           <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
           <TechnicalSkills ref={targetRef} />
+          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
+          <Projects />
       {/* </main> */}
       </div>
     )

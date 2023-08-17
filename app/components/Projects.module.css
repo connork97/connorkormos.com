@@ -1,0 +1,40 @@
+.projectsWrapperDiv {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+}
+
+.projectsH1 {
+    text-align: center;
+    margin-bottom: 10vh;
+    font-size: 7vh;
+    font-weight: bold;
+}
+
+.carouselWrapperDiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.peakSyncCarousel {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+
+.carousel {
+    color: black !important;
+}
+
+.techUsedDiv {
+    margin: auto;
+    background-color: white;
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.techUsed {
+    height: 5vh;
+    margin: 5%;
+}

@@ -2,7 +2,7 @@ import styles from './TechnicalSkills.module.css'
 
 const TechnicalSkills = () => {
     return (
-        <div>
+        <div className={styles.technicalSkillsWrapper}>
             <h1 className={styles.technicalSkillsH1}>Technical Skills</h1>
             <div className={styles.technicalSkillsDiv}>
                 <div className={styles.languagesDiv}>
@@ -11,15 +11,15 @@ const TechnicalSkills = () => {
                 <div className={styles.favoriteSkillsDiv}>
                     <h2>Favorite Tech</h2>
                     <div className={styles.favoriteSkillsIconsDiv}>
-                            <img 
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-                                className={styles.favoriteTechImage}
-                                // style={{marginRight: '15%'}}
-                                />
-                            <img 
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" 
-                                className={styles.favoriteTechImage}
-                                />
+                        <img 
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+                            className={styles.favoriteTechImage}
+                            // style={{marginRight: '15%'}}
+                        />
+                        <img 
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" 
+                            className={styles.favoriteTechImage}
+                        />
                         <br></br>
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" 
@@ -29,11 +29,11 @@ const TechnicalSkills = () => {
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
                             className={styles.favoriteTechImage}
-                            />
+                        />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" 
                             className={styles.favoriteTechImage}    
-                            />
+                        />
                     </div>
                 </div>
                 <div className={styles.moreSkillsDiv}>
