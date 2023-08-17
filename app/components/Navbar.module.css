@@ -1,18 +1,26 @@
 .navbarDiv {
-    margin: 5vh auto;
+    margin: auto;
+    margin-bottom: 5vh;
     width: 100vw;
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 1s ease-in-out;
+    transform: translateY(100%);
+    z-index: 1000;
+}
+
+.hidden {
+    transform: translateY(-100%);
 }
 
 .navbarUl {
     width: 70%;
     display: flex;
     position: fixed;
-    justify-content: space-between;
-    font-size: 1.75rem;
+    justify-content: space-evenly;
+    font-size: 2vw;
     font-weight: bold;
     list-style: none;
 }

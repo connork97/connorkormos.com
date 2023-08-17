@@ -4,6 +4,10 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import styles from './HomePage.module.css';
 
+import Image from 'next/image'
+
+import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
+
 const HomePage = () => {
 
     const [hiText, setHiText] = useState("")
@@ -113,17 +117,52 @@ const HomePage = () => {
         }, 100);
     };
 
-    return (
-        <div className={styles.iAmDiv}>
-            <span>
+    const targetRef = useRef(null)
 
-            <span className={styles.hiImConnor}>{hiConnorText}<span className={styles.blinkingUnderscore}>{underscorePosition === 1 && '_'}</span></span>
-            {/* <span>Hi.&nbsp;&nbsp;I&apos;m Connor.</span> */}
- 
-            <span className={styles.iAmSpan}>{iAmText}
-            <span className={styles.iAmSpan}>{currentIntroTextIndex > 0 & showText ? displayedText : null}<span className={styles.blinkingUnderscore}>{underscorePosition === 3 && '_'}</span></span>
-            <span className={styles.blinkingUnderscore}>{underscorePosition === 2 && '_'}</span></span>
-            </span>
+    const scrollToTarget = () => {
+        if (targetRef.current) {
+            targetRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
+    return (
+        <div>
+            <div className={styles.homepageIntroDiv}>
+                <div className={styles.iAmDiv}>
+                    <span className={styles.hiImConnor}>{hiConnorText}
+                        <span className={styles.blinkingUnderscore}>{underscorePosition === 1 && '_'}</span>
+                    </span>
+                    <span className={styles.iAmSpan}>{iAmText}
+                        <span className={styles.iAmSpan}>{currentIntroTextIndex > 0 & showText ? displayedText : null}<span className={styles.blinkingUnderscore}>{underscorePosition === 2 && '_'}</span>
+                    </span>
+                    </span>
+                </div>
+                <div className={styles.headshotDiv}>
+                    <Image
+                        className={styles.headshotImage}
+                        src='/Cropped_Personal_Profile_Photo.png'
+                        alt="Headshot"
+                        width="350"
+                        height="350"
+                        >
+                    </Image>
+                </div>
+            </div>
+            <MdKeyboardDoubleArrowDown className={styles.downArrowButton} onClick={scrollToTarget} />
+            <div className={styles.testDiv}>
+            </div>
+            <h1 ref={targetRef} className={styles.technicalSkillsH1}>Technical Skills</h1>
+            <div className={styles.technicalSkillsDiv}>
+                <div className={styles.languagesDiv}>
+                    <h1>test</h1>
+                </div>
+                <div className={styles.favoriteSkillsDiv}>
+
+                </div>
+                <div className={styles.moreSkillsDiv}>
+
+                </div>
+            </div>
         </div>
     )
 }

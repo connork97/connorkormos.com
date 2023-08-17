@@ -7,6 +7,10 @@ CSS
 Tailwind CSS**
 React Transition Group***
 
+Third Party Libraries:
+
+React-Icons
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
