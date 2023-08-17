@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-import styles from './HomePage.module.css';
+import styles from './HomePageIntro.module.css';
 
 import Image from 'next/image'
 
-import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
-
-const HomePage = () => {
+const HomePageIntro = () => {
 
     const [hiText, setHiText] = useState("")
     const [connorText, setConnorText] = useState("")
@@ -45,7 +43,6 @@ const HomePage = () => {
         const totalIterations = text.length + 20;
 
         const interval = setInterval(() => {
-            // setShowText(true)
             let newText;
             
             if (iteration < (text.length + 20)) {
@@ -58,7 +55,6 @@ const HomePage = () => {
             if (iteration >= totalIterations) {
                 name(text)
                 clearInterval(interval);
-                // setShowText(false)
             }
             
             iteration += 1;
@@ -84,9 +80,7 @@ const HomePage = () => {
     }, [currentIntroTextIndex]);
     
     useEffect(() => {
-        // setTimeout(() => {
-            typingBackspacingAnimation(currentString);
-        // }, 1000);
+        typingBackspacingAnimation(currentString);
     }, [currentString, currentIntroTextIndex]);
 
 
@@ -117,13 +111,8 @@ const HomePage = () => {
         }, 100);
     };
 
-    const targetRef = useRef(null)
 
-    const scrollToTarget = () => {
-        if (targetRef.current) {
-            targetRef.current.scrollIntoView({ behavior: 'smooth' })
-        }
-    }
+
 
     return (
         <div>
@@ -137,7 +126,7 @@ const HomePage = () => {
                     </span>
                     </span>
                 </div>
-                <div className={styles.headshotDiv}>
+                {/* <div className={styles.headshotDiv}>
                     <Image
                         className={styles.headshotImage}
                         src='/Cropped_Personal_Profile_Photo.png'
@@ -146,25 +135,12 @@ const HomePage = () => {
                         height="350"
                         >
                     </Image>
-                </div>
+                </div> */}
             </div>
-            <MdKeyboardDoubleArrowDown className={styles.downArrowButton} onClick={scrollToTarget} />
             <div className={styles.testDiv}>
-            </div>
-            <h1 ref={targetRef} className={styles.technicalSkillsH1}>Technical Skills</h1>
-            <div className={styles.technicalSkillsDiv}>
-                <div className={styles.languagesDiv}>
-                    <h1>test</h1>
-                </div>
-                <div className={styles.favoriteSkillsDiv}>
-
-                </div>
-                <div className={styles.moreSkillsDiv}>
-
-                </div>
             </div>
         </div>
     )
 }
 
-export default HomePage;
+export default HomePageIntro;

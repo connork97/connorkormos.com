@@ -12,7 +12,7 @@
     margin: auto;
     /* margin-top: 0; */
     margin-left: 10%;
-    width: 50%;
+    width: 1000%;
     height: 75%;
     overflow: hidden;
     font-weight: bold;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.headshotDiv {
+/* .headshotDiv {
     margin: auto;
     margin-right: 10%;
     display: flex;
@@ -35,7 +35,7 @@
     height: 55%;
     width: auto;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .hiImConnor {
     display: flex;
@@ -72,23 +72,23 @@
     }
 }
 
-.downArrowButton {
+/* .downArrowButton {
     margin: auto;
     margin-bottom: 25vh;
     display: flex;
     justify-content: center;
     scale: 5;
     /* transform-: scaleX(115%) */
-    transition: transform 0.3s ease-in-out;
-}
+    /* transition: transform 0.3s ease-in-out; */
+/* } */
 
-.downArrowButton:hover {
+/* .downArrowButton:hover {
     /* scale: 5.0; */
-    cursor: pointer;
-    transform: scale(1.2);
-}
+    /* cursor: pointer; */
+    /* transform: scale(1.2); */
+/* } */
 
-.technicalSkillsH1 {
+/* .technicalSkillsH1 {
     margin-top: 50vh;
     padding-top: 15vh;
     text-align: center;
@@ -109,4 +109,4 @@
     width: 25%;
     background-color: white;
     height: 75%;
-}
+} */

@@ -3,6 +3,23 @@ body {
   overflow-x: hidden;
   /* F8CB54 */
 }
+
+.downArrowButton {
+  margin: auto;
+  margin-bottom: 25vh;
+  display: flex;
+  justify-content: center;
+  scale: 5;
+  /* transform-: scaleX(115%) */
+  transition: transform 0.3s ease-in-out;
+}
+
+.downArrowButton:hover {
+  /* scale: 5.0; */
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

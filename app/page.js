@@ -1,14 +1,31 @@
+'use client'
 import Image from 'next/image'
 
-import HomePage from './components/HomePage'
+import { useRef } from 'react'
+import HomePageIntro from './components/HomePageIntro'
+import TechnicalSkills from './components/TechnicalSkills'
+
+import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 
 export default function Home() {
+
+  const targetRef = useRef(null)
+
+  const scrollToTarget = () => {
+    if (targetRef.current) {
+        targetRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
       // <main className="flex min-h-screen flex-col items-center justify-between p-24">
           // {/* <h1 className='text-5xl font-bold'>Hi.</h1> */}
-          <HomePage />
-      // </main>
+      <div>
+          <HomePageIntro />
+          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
+          <TechnicalSkills ref={targetRef} />
+      {/* </main> */}
+      </div>
     )
   }
   

@@ -1,0 +1,65 @@
+.technicalSkillsH1 {
+    margin-top: 50vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+.technicalSkillsDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 15vh;
+    padding-bottom: 25vh;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.languagesDiv, .favoriteSkillsDiv, .moreSkillsDiv {
+    position: relative;
+    width: 25%;
+    background-color: white;
+    height: 75%;
+    border-radius: 10%;
+    opacity: 0.8;
+}
+
+.favoriteSkillsDiv {
+    margin-bottom: 2.5%;
+}
+
+.favoriteSkillsIconsDiv {
+    height: 100%;
+    width: 100%;
+}
+
+.languagesDiv, .moreSkillsDiv {
+    margin-top: 2.5%;
+}
+
+.techImage {
+    margin: 5%;
+    height: 12.5%;
+    width: auto;
+    border-radius: 15%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.techImage:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.favoriteTechImage {
+    margin: 7.5%;
+    height: 15%;
+    width: auto;
+    border-radius: 15%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.favoriteTechImage:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
