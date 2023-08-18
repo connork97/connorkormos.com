@@ -23,7 +23,7 @@ const Projects = () => {
 
     const renderCarouselItems = peakSyncImageArr.map((image) => {
         return (
-            <Carousel.Item interval={5000}>
+            <Carousel.Item key={image} interval={5000}>
                 <Image
                     // className='d-block w-100'
                     className={styles.carouselImage}
@@ -32,6 +32,7 @@ const Projects = () => {
                     height='360'
                     width='640'
                     quality={100}
+                    key={image}
                 />
             </Carousel.Item>
         )
@@ -55,55 +56,67 @@ const Projects = () => {
                 </Carousel>
                 <div className={styles.peakSyncDescription}>
                     <h2>Peak Sync</h2>
-                    <p>This is a very elaborate and amazing description of my revolutionary software known as "Peak Sync".</p>
+                    <p>This is a very elaborate and amazing description of my revolutionary software known as &quot;Peak Sync&quot;.</p>
                     <div className={styles.techUsedDiv}>
                         <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" 
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
                         className={styles.techUsed}
+                        alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" 
                             className={styles.techUsed}    
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg"
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                         <img 
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain-wordmark.svg" 
                             className={styles.techUsed}
+                            alt="err"
                         />
                     </div>
                 </div>
