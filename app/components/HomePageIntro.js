@@ -127,6 +127,8 @@ const HomePageIntro = forwardRef(( { introRef } ) => {
     )
 })
 
+HomePageIntro.displayName = 'HomePageIntro'
+
 export default HomePageIntro;
 
 /* <div className={styles.headshotDiv}>

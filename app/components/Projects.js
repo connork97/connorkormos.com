@@ -125,4 +125,6 @@ const Projects = forwardRef(({ projectsRef }) => {
     )
 })
 
+Projects.displayName = 'Projects'
+
 export default Projects;

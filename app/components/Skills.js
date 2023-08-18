@@ -119,4 +119,6 @@ const Skills = forwardRef(({ skillsRef }) => {
     )
 })
 
+Skills.displayName = 'Skills'
+
 export default Skills;
