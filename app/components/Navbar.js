@@ -10,15 +10,17 @@ import { HiOutlineMenu } from 'react-icons/hi'
 const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
 
     const [isHidden, setIsHidden] = useState(true)
+    const [lastScroll, setLastScroll] = useState(100)
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY
-            setIsHidden(scrollY > 100)
+            setIsHidden(scrollY > lastScroll)
+            setLastScroll(scrollY)
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-    })
+    }, [lastScroll])
 
     return (
         // <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
@@ -29,11 +31,11 @@ const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
                 <li onClick={() => scrollToTarget(introRef)}>
                     Home
                 </li>
-                <li onClick={() => scrollToTarget(projectsRef)}>
-                    Projects
-                </li>
                 <li onClick={() => scrollToTarget(skillsRef)}>
                     Skills
+                </li>
+                <li onClick={() => scrollToTarget(projectsRef)}>
+                    Projects
                 </li>
                 {/* <li onClick={() => scrollToTarget(introRef)}>
                     Contact

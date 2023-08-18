@@ -112,19 +112,16 @@ const HomePageIntro = forwardRef(( { introRef } ) => {
     };
 
     return (
-        <div ref={introRef}>
-            <div className={styles.homepageIntroDiv}>
-                <div className={styles.iAmDiv}>
-                    <span className={styles.hiImConnor}>{hiConnorText}
-                        <span className={styles.blinkingUnderscore}>{underscorePosition === 1 && '_'}</span>
+        <div className={styles.homepageIntroDiv} ref={introRef}>
+            <div className={styles.iAmDiv}>
+                <span className={styles.hiImConnor}>{hiConnorText}
+                    <span className={styles.blinkingUnderscore}>{underscorePosition === 1 && '_'}</span>
+                </span>
+                <span className={styles.iAmSpan}>{iAmText}
+                    <span className={styles.iAmSpan}>{currentIntroTextIndex > 0 & showText ? displayedText : null}
+                        <span className={styles.blinkingUnderscore}>{underscorePosition === 2 && '_'}</span>
                     </span>
-                    <span className={styles.iAmSpan}>{iAmText}
-                        <span className={styles.iAmSpan}>{currentIntroTextIndex > 0 & showText ? displayedText : null}<span className={styles.blinkingUnderscore}>{underscorePosition === 2 && '_'}</span>
-                    </span>
-                    </span>
-                </div>
-            </div>
-            <div className={styles.testDiv}>
+                </span>
             </div>
         </div>
     )

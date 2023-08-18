@@ -8,7 +8,7 @@ import HomePageIntro from './components/HomePageIntro'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 
-import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
+import { MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp } from 'react-icons/md'
 
 export default function Home() {
 
@@ -27,11 +27,9 @@ export default function Home() {
     setCheck(!check)
   }, [])
 
-  const scrollToTarget = (clickedRef) => {
-    console.log(introRef.current)
+  const scrollToTarget = (clickedRef, block= 'start') => {
     if (clickedRef.current) {
-      console.log(clickedRef)
-      clickedRef.current.scrollIntoView({ behavior: 'smooth' })
+      clickedRef.current.scrollIntoView({ behavior: 'smooth', block: block })
     }
   }
 
@@ -46,10 +44,16 @@ export default function Home() {
             projectsRef={projectsRef}
           />
           <HomePageIntro introRef={introRef} />
-          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
-          <Skills skillsRef={skillsRef} />
-          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
+          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(skillsRef)} />
+          {/* <MdKeyboardDoubleArrowUp
+            className="upArrowButton"
+            onClick={() => scrollToTarget(introRef)} 
+          /> */}
+          <Skills skillsRef={skillsRef} className='mainComponent' />
+          {/* <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(projectsRef)} /> */}
           <Projects projectsRef={projectsRef} />
+          <MdKeyboardDoubleArrowUp className="upArrowButton" onClick={() => scrollToTarget(introRef)} />
+          <p className='footerP'>(Back to top)</p>
       {/* </main> */}
       </div>
     )

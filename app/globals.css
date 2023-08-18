@@ -2,12 +2,12 @@
 body {
   background: #FDBD4D !important;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   /* F8CB54 */
 }
 
-.downArrowButton {
+.downArrowButton, .upArrowButton {
   margin: auto;
-  margin-bottom: 25vh;
   display: flex;
   justify-content: center;
   scale: 5;
@@ -15,10 +15,22 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.downArrowButton:hover {
+.downArrowButton:hover, .upArrowButton:hover {
   /* scale: 5.0; */
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.downArrowButton {
+  margin-bottom: 20vh;
+}
+
+.footerP {
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* :root {

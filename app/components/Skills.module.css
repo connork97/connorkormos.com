@@ -1,12 +1,12 @@
 .technicalSkillsWrapper {
-    margin-bottom: 100vh;
+    margin-bottom: 40%;
 }
 
 .technicalSkillsH1 {
-    margin-top: 50vh;
-    padding-top: 15vh;
+    /* margin-top: 50%; */
+    padding-top: 5%;
     text-align: center;
-    font-size: 7vh;
+    font-size: 6.5rem;
     font-weight: bold;
 }
 
@@ -15,11 +15,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 15vh;
-    padding-bottom: 25vh;
+    padding-top: 5%;
+    padding-bottom: 12.5%;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .languagesDiv, .favoriteSkillsDiv, .moreSkillsDiv {
