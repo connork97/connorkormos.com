@@ -5,9 +5,11 @@ import styles from './Navbar.module.css'
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
 
+import { HiOutlineMenu } from 'react-icons/hi'
+
 const Navbar = () => {
 
-    const [isHidden, setIsHidden] = useState(false)
+    const [isHidden, setIsHidden] = useState(true)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,8 +22,10 @@ const Navbar = () => {
 
     return (
         // <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
-        <div className={`${styles.navbarDiv} ${isHidden ? styles.hidden : null}`}>
-            <ul className={styles.navbarUl}>
+        // <div className={`${styles.navbarDiv} ${isHidden ? styles.hidden : null}`}>
+        <div className={styles.navbarDiv}>
+            <HiOutlineMenu className={styles.menuIcon} onClick={() => setIsHidden(!isHidden)} />
+            <ul className={isHidden ? styles.hiddenNavBarUl : styles.navbarUl}>
                 <li>
                     <Link href='/'>Home</Link>
                 </li>
