@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 
 import styles from './HomePageIntro.module.css';
 
 import Image from 'next/image'
 
-const HomePageIntro = () => {
+const HomePageIntro = forwardRef(( { introRef } ) => {
 
     const [hiText, setHiText] = useState("")
     const [connorText, setConnorText] = useState("")
@@ -111,11 +111,8 @@ const HomePageIntro = () => {
         }, 100);
     };
 
-
-
-
     return (
-        <div>
+        <div ref={introRef}>
             <div className={styles.homepageIntroDiv}>
                 <div className={styles.iAmDiv}>
                     <span className={styles.hiImConnor}>{hiConnorText}
@@ -126,21 +123,22 @@ const HomePageIntro = () => {
                     </span>
                     </span>
                 </div>
-                {/* <div className={styles.headshotDiv}>
-                    <Image
-                        className={styles.headshotImage}
-                        src='/Cropped_Personal_Profile_Photo.png'
-                        alt="Headshot"
-                        width="350"
-                        height="350"
-                        >
-                    </Image>
-                </div> */}
             </div>
             <div className={styles.testDiv}>
             </div>
         </div>
     )
-}
+})
 
 export default HomePageIntro;
+
+/* <div className={styles.headshotDiv}>
+    <Image
+        className={styles.headshotImage}
+        src='/Cropped_Personal_Profile_Photo.png'
+        alt="Headshot"
+        width="350"
+        height="350"
+        >
+    </Image>
+</div> */

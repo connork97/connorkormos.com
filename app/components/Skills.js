@@ -1,8 +1,10 @@
-import styles from './TechnicalSkills.module.css'
+import styles from './Skills.module.css'
 
-const TechnicalSkills = () => {
+import { forwardRef } from 'react'
+
+const Skills = forwardRef(({ skillsRef }) => {
     return (
-        <div className={styles.technicalSkillsWrapper}>
+        <div ref={skillsRef} className={styles.technicalSkillsWrapper}>
             <h1 className={styles.technicalSkillsH1}>Technical Skills</h1>
             <div className={styles.technicalSkillsDiv}>
                 <div className={styles.languagesDiv}>
@@ -115,6 +117,6 @@ const TechnicalSkills = () => {
             </div>
         </div>
     )
-}
+})
 
-export default TechnicalSkills;
+export default Skills;

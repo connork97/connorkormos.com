@@ -2,20 +2,36 @@
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import Navbar from './components/Navbar';
 import HomePageIntro from './components/HomePageIntro'
-import TechnicalSkills from './components/TechnicalSkills'
+import Skills from './components/Skills'
 import Projects from './components/Projects'
 
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
 
 export default function Home() {
 
-  const targetRef = useRef(null)
+  const [check, setCheck] = useState(false)
 
-  const scrollToTarget = () => {
-    if (targetRef.current) {
-        targetRef.current.scrollIntoView({ behavior: 'smooth' })
+  const introRef = useRef(null)
+  const skillsRef = useRef(null)
+  const projectsRef = useRef(null)
+  useEffect(() => {
+    console.log("intro ref", introRef.current)
+    console.log("skills ref", skillsRef)
+    console.log("projects ref", projectsRef)
+  }, [check])
+
+  useEffect(() => {
+    setCheck(!check)
+  }, [])
+
+  const scrollToTarget = (clickedRef) => {
+    console.log(introRef.current)
+    if (clickedRef.current) {
+      console.log(clickedRef)
+      clickedRef.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -23,11 +39,17 @@ export default function Home() {
       // <main className="flex min-h-screen flex-col items-center justify-between p-24">
           // {/* <h1 className='text-5xl font-bold'>Hi.</h1> */}
       <div>
-          <HomePageIntro />
+          <Navbar 
+            scrollToTarget={scrollToTarget} 
+            introRef={introRef}
+            skillsRef={skillsRef}
+            projectsRef={projectsRef}
+          />
+          <HomePageIntro introRef={introRef} />
           <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
-          <TechnicalSkills ref={targetRef} />
+          <Skills skillsRef={skillsRef} />
           <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={scrollToTarget} />
-          <Projects />
+          <Projects projectsRef={projectsRef} />
       {/* </main> */}
       </div>
     )

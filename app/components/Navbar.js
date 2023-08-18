@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 
 import { HiOutlineMenu } from 'react-icons/hi'
 
-const Navbar = () => {
+const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
 
     const [isHidden, setIsHidden] = useState(true)
 
@@ -26,18 +26,18 @@ const Navbar = () => {
         <div className={styles.navbarDiv}>
             <HiOutlineMenu className={styles.menuIcon} onClick={() => setIsHidden(!isHidden)} />
             <ul className={isHidden ? styles.hiddenNavBarUl : styles.navbarUl}>
-                <li>
-                    <Link href='/'>Home</Link>
+                <li onClick={() => scrollToTarget(introRef)}>
+                    Home
                 </li>
-                <li>
-                    <Link href='/projects'>Projects</Link>
+                <li onClick={() => scrollToTarget(projectsRef)}>
+                    Projects
                 </li>
-                <li>
-                    <Link href='/about'>About</Link>
+                <li onClick={() => scrollToTarget(skillsRef)}>
+                    Skills
                 </li>
-                <li>
-                    <Link href='/contact'>Contact</Link>
-                </li>
+                {/* <li onClick={() => scrollToTarget(introRef)}>
+                    Contact
+                </li> */}
             </ul>
         </div>
     )

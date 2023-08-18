@@ -6,6 +6,7 @@
     /* width: 100vw; */
     display: flex;
     left: 3%;
+    z-index: 10;
     /* flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
@@ -15,7 +16,7 @@
 .menuIcon {
     position: relative;
     /* margin-bottom: 10%; */
-    /* top: 5%; */
+    top: 0.25rem;
     left: 0;
     scale: 3;
     transition: transform 0.5s ease-in-out;
@@ -42,19 +43,20 @@
 }
 
 .navbarUl {
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-out;
     transform: translateX(0%);
 }
 
 .hiddenNavBarUl {
     /* animation: hideNavbar 1s ease-in-out forwards; */
     /* left: 100px; */
-    transition: transform 1s ease;
+    transition: transform 1s ease-in;
     transform: translateX(-200%);
 }
 
 
-.navbarUl li a, .hiddenNavBarUl li a {
+.navbarUl li, .hiddenNavBarUl li {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }

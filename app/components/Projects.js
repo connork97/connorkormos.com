@@ -1,13 +1,13 @@
 'use client'
 import Image from 'next/image'
 
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 
 import styles from './Projects.module.css'
 
 import Carousel from 'react-bootstrap/Carousel'
 
-const Projects = () => {
+const Projects = forwardRef(({ projectsRef }) => {
 
     const peakSyncImageArr = [
         'AdminDashboardPreview.jpg',
@@ -48,7 +48,7 @@ const Projects = () => {
     }
 
     return (
-        <div className={styles.projectsWrapperDiv}>
+        <div ref={projectsRef} className={styles.projectsWrapperDiv}>
             <h1 className={styles.projectsH1}>My Projects!</h1>
             <div className={styles.carouselWrapperDiv}>
                 <Carousel className={styles.peakSyncCarousel} variant='dark'>
@@ -123,6 +123,6 @@ const Projects = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Projects;
