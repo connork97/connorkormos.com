@@ -11,6 +11,7 @@ const HomePageIntro = forwardRef(( { introRef } ) => {
     const [hiText, setHiText] = useState("")
     const [connorText, setConnorText] = useState("")
     const [iAmText, setIAmText] = useState("")
+    // let hiConnorText = <pre>{hiText + connorText}</pre>
     let hiConnorText = hiText + connorText
     
 
@@ -83,6 +84,12 @@ const HomePageIntro = forwardRef(( { introRef } ) => {
         typingBackspacingAnimation(currentString);
     }, [currentString, currentIntroTextIndex]);
 
+    // useEffect(() => {
+    //     const iAmDivWidth = iAmDivRef.current.getBoundingClientRect().width
+    //     const iAmSpanWidth = iAmSpanRef.current.getBoundingClientRect().width
+    //     console.log("div", iAmDivWidth)
+    //     console.log("span", iAmSpanWidth)
+    // }, [displayedText])
 
     const typingBackspacingAnimation = (text) => {
         let iteration = 0;

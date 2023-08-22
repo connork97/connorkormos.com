@@ -1,29 +1,35 @@
 .projectsWrapperDiv {
     margin-bottom: 10%;
+    height: 50rem;
 }
 
 .projectsH1 {
     text-align: center;
     padding-top: 5%;
     margin-bottom: 10vh;
-    font-size: 7vh;
+    font-size: 5rem;
     font-weight: bold;
 }
 
 .carouselWrapperDiv {
+    margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    border-radius: 25px !important;
 }
 
 .peakSyncCarousel {
     margin: auto;
     text-align: center;
-    width: 75%;
+    width: 50%;
 }
 
-.carousel {
-    color: black !important;
+.peakSyncDescriptionDiv {
+    position: relative;
+    margin-top: 0;
+    width: 50%;
 }
 
 .techUsedDiv {
@@ -37,4 +43,19 @@
 .techUsed {
     height: 5vh;
     margin: 5%;
+}
+
+.carouselImage {
+    margin: auto;
+    max-height: 35rem;
+    max-width: 100%;
+}
+
+.peakSyncDescription {
+    text-align: justify;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 
+import Link from 'next/link'
 import React, { useState, forwardRef } from 'react'
 
 import styles from './Projects.module.css'
@@ -21,12 +22,23 @@ const Projects = forwardRef(({ projectsRef }) => {
         'UserDatabasePreview.jpg'
     ]
 
-    const renderCarouselItems = peakSyncImageArr.map((image) => {
+    const peakSyncTechUsedArr = [
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg", alt: "React.js"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg", alt: "React-Bootstrap"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg", alt: "Python"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg", alt: "Flask"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg", alt: "SQLite"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg", alt: "SQLAlchemy"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg", alt: "PostgreSQL"}
+    ]
+
+    const renderPeakSyncCarouselItems = peakSyncImageArr.map((image) => {
         return (
             <Carousel.Item key={image} interval={5000}>
                 <Image
                     // className='d-block w-100'
-                    className={styles.carouselImage}
+                    className={`${styles.carouselImage} rounded-4`}
                     src={`/peaksync/${image}`}
                     alt={image}
                     height='360'
@@ -38,86 +50,24 @@ const Projects = forwardRef(({ projectsRef }) => {
         )
     })
 
-    const [index, setIndex] = useState(3)
-
-    const handleChangeImage = (event) => {
-        if (event.target.name === 'forward' && index === peakSyncImageArr.length - 1) setIndex(0)
-        else if (event.target.name === 'back' && index === 0) setIndex(peakSyncImageArr.length - 1)
-        else if (event.target.name === 'forward') setIndex((prevIndex) => prevIndex + 1)
-        else if (event.target.name === 'back') setIndex((prevIndex) => prevIndex - 1)
-    }
+    const renderPeakSyncTechUsed = peakSyncTechUsedArr.map((tech) => {
+        return <img src={tech.source} alt={tech.alt} className={styles.techUsed} key={tech.source} />
+    })
 
     return (
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
-            <h1 className={styles.projectsH1}>My Projects!</h1>
+            <h1 className={styles.projectsH1}>Projects</h1>
             <div className={styles.carouselWrapperDiv}>
                 <Carousel className={styles.peakSyncCarousel} variant='dark'>
-                    {renderCarouselItems}
+                    {renderPeakSyncCarouselItems}
                 </Carousel>
-                <div className={styles.peakSyncDescription}>
-                    <h2>Peak Sync</h2>
-                    <p>This is a very elaborate and amazing description of my revolutionary software known as &quot;Peak Sync&quot;.</p>
+                <div className={styles.peakSyncDescriptionDiv}>
+                    <h2> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.link}>Peak Sync</Link></h2>
+                    <p className={styles.peakSyncDescription}>Tailored to the fitness industry, this software is used to create and manage a database of users, events, offerings, and more.</p>
+                    <p className={styles.peakSyncDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.</p>
+                    <p className={styles.peakSyncDescription}>Back-end built out with Python, Flask, SQLAlchemy, and PostgreSQL to properly manage large relational database with just a few clicks by users.</p>
                     <div className={styles.techUsedDiv}>
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
-                        className={styles.techUsed}
-                        alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" 
-                            className={styles.techUsed}    
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg"
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
-                        <img 
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain-wordmark.svg" 
-                            className={styles.techUsed}
-                            alt="err"
-                        />
+                        {renderPeakSyncTechUsed}
                     </div>
                 </div>
             </div>
@@ -128,3 +78,66 @@ const Projects = forwardRef(({ projectsRef }) => {
 Projects.displayName = 'Projects'
 
 export default Projects;
+
+
+
+{/* <img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
+className={styles.techUsed}
+alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" 
+    className={styles.techUsed}    
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg"
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/>
+<img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain-wordmark.svg" 
+    className={styles.techUsed}
+    alt="err"
+/> */}

@@ -3,9 +3,10 @@ import styles from './Skills.module.css'
 import { forwardRef } from 'react'
 
 const Skills = forwardRef(({ skillsRef }) => {
+
     return (
         <div ref={skillsRef} className={styles.technicalSkillsWrapper}>
-            <h1 className={styles.technicalSkillsH1}>Technical Skills</h1>
+            <h1 className={styles.technicalSkillsH1}>Skills</h1>
             <div className={styles.technicalSkillsDiv}>
                 <div className={styles.languagesDiv}>
                     <h2>Languages</h2>

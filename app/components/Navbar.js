@@ -9,7 +9,7 @@ import { HiOutlineMenu } from 'react-icons/hi'
 
 const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
 
-    const [isHidden, setIsHidden] = useState(true)
+    const [isHidden, setIsHidden] = useState(false)
     const [lastScroll, setLastScroll] = useState(100)
 
     useEffect(() => {

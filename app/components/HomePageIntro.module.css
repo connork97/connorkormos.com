@@ -14,13 +14,14 @@
     flex-direction: column;
     margin: auto;
     /* margin-top: 0; */
-    width: 100%;
-    margin-left: 27.5%;
+    width: 50rem;
+    /* margin-left: 27.5%; */
     height: 75%;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-weight: bold;
     justify-content: center;
     align-items: center;
+    white-space: pre;
 }
 
 .hiImConnor {
@@ -37,7 +38,7 @@
 .iAmSpan {
     margin: auto;
     /* margin-left: 0; */
-    width: 100%;
+    width: 150%;
     height: 67%;
     text-align: left;
     font-size: 3rem;
