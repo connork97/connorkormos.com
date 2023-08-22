@@ -4,13 +4,15 @@
 
 .technicalSkillsH1 {
     /* margin-top: 50%; */
-    padding-top: 5%;
+    padding-top: 3.5rem;
+    padding-bottom: 10rem;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
 }
 
 .technicalSkillsDiv {
+    margin: auto;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -22,31 +24,45 @@
     width: 100%;
 }
 
-.languagesDiv, .favoriteSkillsDiv, .moreSkillsDiv {
+.divTitle {
+    font-size: 150%;
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 3%;
+}
+
+.toolsDiv, .favoriteSkillsDiv, .moreSkillsDiv {
     position: relative;
     width: 25%;
     background-color: white;
-    height: 75%;
     border-radius: 10%;
     opacity: 0.8;
 }
 
 .favoriteSkillsDiv {
+    margin: auto;
     margin-bottom: 2.5%;
+    width: 40%;
+    border-radius: 25px;
 }
 
 .favoriteSkillsIconsDiv {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 10%; */
+    /* width: 10%; */
 }
 
-.languagesDiv, .moreSkillsDiv {
-    margin-top: 2.5%;
+.toolsDiv, .moreSkillsDiv {
+    /* margin-top: 5%; */
+    border-radius: 25px;
+    width: 30%;
+    height: 22.5rem;
 }
 
 .techImage {
-    margin: 5%;
-    height: 12.5%;
+    margin: 3.5%;
+    height: 20%;
     width: auto;
     border-radius: 15%;
     transition: transform 0.5s ease-in-out;
@@ -58,8 +74,8 @@
 }
 
 .favoriteTechImage {
-    margin: 7.5%;
-    height: 15%;
+    margin: 5%;
+    height: 4rem;
     width: auto;
     border-radius: 15%;
     transition: transform 0.5s ease-in-out;

@@ -14,7 +14,7 @@
     flex-direction: column;
     margin: auto;
     /* margin-top: 0; */
-    width: 50rem;
+    width: 45rem;
     /* margin-left: 27.5%; */
     height: 75%;
     /* overflow: hidden; */
@@ -26,6 +26,7 @@
 
 .hiImConnor {
     display: flex;
+    justify-content: start;
     text-align: left;
     position: relative;
     width: 100%;
