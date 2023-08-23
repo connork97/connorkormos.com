@@ -113,9 +113,9 @@ const Projects = forwardRef(({ projectsRef }) => {
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 style={{textAlign: 'right', marginRight: '25%'}}> <Link href='https://codify-ea413.web.app/' target='_blank' className={styles.link}>Codify</Link></h2>
                     <br></br>
-                    <p className={styles.codifyDescription}>React application integrating Spotify's public API for music discovery and personalization.</p>
+                    <p className={styles.codifyDescription}>React application integrating Spotify`&apos;s public API for music discovery and personalization.</p>
                     <p className={styles.codifyDescription}>
-                    Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify's database.
+                    Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify`&apos;s database.
                     Additionally, users can play previews of available songs, and if they have their own Spotify profile logged in can click the logo to be directly linked to their desired location to save it for later.
                     </p>
                     <br></br>
