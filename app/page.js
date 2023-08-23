@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import HomePageIntro from './components/HomePageIntro'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import MouseEffect from './components/MouseEffect';
 
 import { MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp } from 'react-icons/md'
 
@@ -17,11 +18,6 @@ export default function Home() {
   const introRef = useRef(null)
   const skillsRef = useRef(null)
   const projectsRef = useRef(null)
-  useEffect(() => {
-    console.log("intro ref", introRef.current)
-    console.log("skills ref", skillsRef)
-    console.log("projects ref", projectsRef)
-  }, [check])
 
   useEffect(() => {
     setCheck(!check)
@@ -37,6 +33,7 @@ export default function Home() {
       // <main className="flex min-h-screen flex-col items-center justify-between p-24">
           // {/* <h1 className='text-5xl font-bold'>Hi.</h1> */}
       <div>
+          <MouseEffect />
           <Navbar 
             scrollToTarget={scrollToTarget} 
             introRef={introRef}

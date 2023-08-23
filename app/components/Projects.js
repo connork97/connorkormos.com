@@ -50,9 +50,11 @@ const Projects = forwardRef(({ projectsRef }) => {
         )
     })
 
-    const renderPeakSyncTechUsed = peakSyncTechUsedArr.map((tech) => {
-        return <img src={tech.source} alt={tech.alt} className={styles.techUsed} key={tech.source} />
-    })
+    const renderPeakSyncTechUsed = (array) => {
+        return array.map((tech) => {
+            return <img src={tech.source} alt={tech.alt} className={styles.techUsed} key={tech.source} />
+        })
+    }
 
     return (
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
@@ -63,11 +65,15 @@ const Projects = forwardRef(({ projectsRef }) => {
                 </Carousel>
                 <div className={styles.peakSyncDescriptionDiv}>
                     <h2> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.link}>Peak Sync</Link></h2>
+                    <br></br>
                     <p className={styles.peakSyncDescription}>Tailored to the fitness industry, this software is used to create and manage a database of users, events, offerings, and more.</p>
-                    <p className={styles.peakSyncDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.</p>
-                    <p className={styles.peakSyncDescription}>Back-end built out with Python, Flask, SQLAlchemy, and PostgreSQL to properly manage large relational database with just a few clicks by users.</p>
+                    <p className={styles.peakSyncDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.
+                    Back-end built out with Python, Flask, SQLAlchemy, and PostgreSQL to properly manage large relational database with just a few clicks by users.</p>
+                    <br></br>
                     <div className={styles.techUsedDiv}>
-                        {renderPeakSyncTechUsed}
+                        {renderPeakSyncTechUsed(peakSyncTechUsedArr.slice(0, 4))}
+                        <br></br>
+                        {renderPeakSyncTechUsed(peakSyncTechUsedArr.slice(4, 8))}
                     </div>
                 </div>
             </div>

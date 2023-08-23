@@ -33,6 +33,62 @@ body {
   font-weight: bold;
 }
 
+
+#container {
+  margin: auto;
+  text-align: center;
+  background: none;
+}
+
+
+#blobDiv {
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+}
+
+#blob {
+  position: absolute;
+  background-color: white;
+  background: linear-gradient(
+      to right,
+      white,
+      white
+  );
+  height: 450px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  left: 50%;
+  right: 50%;
+  translate: -50% -50%;
+  animation: rotate 20s infinite;
+  filter: blur(300px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: none;
+  backdrop-filter: blur(300px);
+}
+
+@keyframes rotate {
+  from {
+      rotate: 0deg;
+  }
+
+  50% {
+      scale: 1 1.5;
+  }
+  
+  to {
+      rotate: 360deg;
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
