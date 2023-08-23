@@ -15,14 +15,14 @@
 
 .carouselWrapperDiv {
     margin: auto;
+    margin-bottom: 15rem;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 100%;
     border-radius: 25px !important;
 }
 
-.peakSyncCarousel {
+.projectCarousel {
     position: relative;
     margin: auto;
     /* margin-right: 2.5%; */
@@ -43,15 +43,40 @@
 .peakSyncDescriptionDiv {
     position: relative;
     margin-top: 0;
+    margin-left: 0;
     /* margin-left: 2.5%; */
     width: 40%;
 }
 
-.techUsedDiv {
+.peakSyncTechUsedDiv {
     margin: auto;
+    margin-left: 0;
     background-color: white;
     border-radius: 25px;
-    width: 100%;
+    width: 75%;
+    text-align: center;
+}
+
+.codifyDescriptionDiv {
+    position: relative;
+    margin: auto;
+    margin-top: 0;
+    margin-right: 0;
+    right: -8.75%;
+
+    /* margin-left: 2.5%; */
+    width: 40%;
+}
+
+.codifyTechUsedDiv {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-left: 0;
+    /* margin-right: 0; */
+    background-color: white;
+    border-radius: 25px;
+    width: 75%;
     text-align: center;
 }
 
@@ -68,8 +93,16 @@
     cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }
 
-.peakSyncDescription {
+.projectDescription {
+    width: 75%;
     position: relative;
+    text-align: justify;
+    z-index: 2;
+}
+
+.codifyDescription {
+    position: relative;
+    width: 75%;
     text-align: justify;
     z-index: 2;
 }

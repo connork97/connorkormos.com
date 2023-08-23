@@ -28,10 +28,14 @@ body {
   margin-bottom: 20vh;
 }
 
+.upArrowButton {
+  margin-top: 75rem;
+}
+
 .footerP {
   position: relative;
   margin-top: 2.5%;
-  margin-bottom: 5%;
+  margin-bottom: 50rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
