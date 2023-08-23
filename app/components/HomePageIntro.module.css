@@ -1,12 +1,12 @@
 .homepageIntroDiv {
     /* position: absolute; */
-    padding-top: 10%;
+    padding-top: 5%;
     /* padding-left: 10%; */
-    margin-bottom: 20%;
+    /* margin-bottom: 20%; */
     display: flex;
     flex-direction: row;
     width: 100vw;
-    /* height: 50vh; */
+    height: 90vh;
 }
 
 .iAmDiv {
@@ -33,18 +33,19 @@
     height: 33%;
     /* margin-top: 2.5%; */
     font-size: 6.5rem;
-    line-height: 7rem;
+    /* line-height: 7rem; */
+    z-index: 2;
 }
 
 .iAmSpan {
     margin: auto;
     /* margin-left: 0; */
     width: 150%;
-    height: 67%;
+    height: 100%;
     text-align: left;
     font-size: 3rem;
-    line-height: 4rem;
-    z-index: 9;
+    /* line-height: 4rem; */
+    z-index: 2;
 }
 
 .blinkingUnderscore {

@@ -4,11 +4,13 @@
 }
 
 .projectsH1 {
+    position: relative;
     text-align: center;
     padding-top: 5%;
     margin-bottom: 10vh;
     font-size: 5rem;
     font-weight: bold;
+    z-index: 2;
 }
 
 .carouselWrapperDiv {
@@ -21,12 +23,14 @@
 }
 
 .peakSyncCarousel {
+    position: relative;
     margin: auto;
     /* margin-right: 2.5%; */
     text-align: center;
     height: 32.5rem;
     max-height: 50vh;
     width: 50%;
+    z-index: 2;
 }
 
 .carouselImage {
@@ -52,14 +56,30 @@
 }
 
 .techUsed {
+    position: relative;
     height: 3.5rem;
     margin: 5%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.techUsed:hover {
+    transform: scale(1.25);
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }
 
 .peakSyncDescription {
+    position: relative;
     text-align: justify;
+    z-index: 2;
 }
 
 .link {
+    position: relative;
     color: black;
+    z-index: 2;
+}
+
+.link:hover {
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }

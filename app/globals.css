@@ -3,21 +3,24 @@ body {
   background: #FDBD4D !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* F8CB54 */
+  /* cursor: pointer; */
+  cursor: url('../public/images/location-arrow-solid.svg'), auto;
 }
 
 .downArrowButton, .upArrowButton {
+  position: relative;
   margin: auto;
   display: flex;
   justify-content: center;
   scale: 5;
   /* transform-: scaleX(115%) */
   transition: transform 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .downArrowButton:hover, .upArrowButton:hover {
   /* scale: 5.0; */
-  cursor: pointer;
+  cursor: url('../public/images/hand-pointer-solid.svg'), auto;
   transform: scale(1.2);
 }
 
@@ -26,11 +29,13 @@ body {
 }
 
 .footerP {
+  position: relative;
   margin-top: 2.5%;
   margin-bottom: 5%;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+  z-index: 2;
 }
 
 
@@ -38,13 +43,14 @@ body {
   margin: auto;
   text-align: center;
   background: none;
+  z-index: 1;
 }
 
 
 #blobDiv {
   position: absolute;
   visibility: hidden;
-  z-index: 10;
+  z-index: 1;
 }
 
 #blob {
@@ -55,7 +61,7 @@ body {
       white,
       white
   );
-  height: 450px;
+  height: 750px;
   aspect-ratio: 1;
   border-radius: 100%;
   left: 50%;
@@ -63,7 +69,7 @@ body {
   translate: -50% -50%;
   animation: rotate 20s infinite;
   filter: blur(300px);
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
 }
 

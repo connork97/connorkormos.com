@@ -9,6 +9,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import MouseEffect from './components/MouseEffect';
 
+import { BsFillCursorFill } from 'react-icons/bs'
 import { MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp } from 'react-icons/md'
 
 export default function Home() {
@@ -50,7 +51,7 @@ export default function Home() {
           {/* <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(projectsRef)} /> */}
           <Projects projectsRef={projectsRef} />
           <MdKeyboardDoubleArrowUp className="upArrowButton" onClick={() => scrollToTarget(introRef)} />
-          <p className='footerP'>(Back to top)</p>
+          <p className='footerP'>Back to Top</p>
       {/* </main> */}
       </div>
     )

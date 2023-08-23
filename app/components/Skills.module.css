@@ -3,12 +3,14 @@
 }
 
 .technicalSkillsH1 {
+    position: relative;
     /* margin-top: 50%; */
     padding-top: 3.5rem;
     padding-bottom: 10rem;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
+    z-index: 2;
 }
 
 .technicalSkillsDiv {
@@ -37,6 +39,7 @@
     background-color: white;
     border-radius: 10%;
     opacity: 0.8;
+    z-index: 2;
 }
 
 .favoriteSkillsDiv {
@@ -69,7 +72,7 @@
 }
 
 .techImage:hover {
-    cursor: pointer;
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
     transform: scale(1.1);
 }
 
@@ -91,6 +94,6 @@
 }
 
 .favoriteTechImage:hover {
-    cursor: pointer;
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
     transform: scale(1.1);
 }
