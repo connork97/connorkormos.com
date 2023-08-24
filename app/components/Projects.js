@@ -77,7 +77,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                     width='640'
                     quality={100}
                     key={image}
-                />
+                    />
             </Carousel.Item>
         )
     })
@@ -111,7 +111,7 @@ const Projects = forwardRef(({ projectsRef }) => {
             </div>
             <div className={styles.carouselWrapperDiv}>
                 <div className={styles.codifyDescriptionDiv}>
-                <h2 style={{textAlign: 'right', marginRight: '25%'}}> <Link href='https://codify-ea413.web.app/' target='_blank' className={styles.link}>Codify</Link></h2>
+                <h2 className={styles.codifyLink}> <Link href='https://codify-ea413.web.app/' target='_blank' className={styles.codifyLink}>Codify</Link></h2>
                     <br></br>
                     <p className={styles.codifyDescription}>React application integrating Spotify`&apos;s public API for music discovery and personalization.</p>
                     <p className={styles.codifyDescription}>

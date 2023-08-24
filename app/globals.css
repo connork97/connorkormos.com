@@ -1,10 +1,15 @@
+html {
+  font-size: 16px !important;
+}
 
 body {
   background: #FDBD4D !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
   /* cursor: pointer; */
-  cursor: url('../public/images/location-arrow-solid.svg'), auto;
+  cursor: url('../public/images/location-arrow-solid.svg'), auto !important;
+  height: 100vh;
+  width: 100vw;
 }
 
 .downArrowButton, .upArrowButton {
@@ -34,14 +39,13 @@ body {
 
 .footerP {
   position: relative;
-  margin-top: 2.5%;
-  margin-bottom: 50rem;
+  margin-top: 5vh;
+  padding-bottom: 25vh;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   z-index: 2;
 }
-
 
 #container {
   margin: auto;
@@ -65,14 +69,14 @@ body {
       white,
       white
   );
-  height: 750px;
+  height: 100vh;
   aspect-ratio: 1;
   border-radius: 100%;
   left: 50%;
   right: 50%;
   translate: -50% -50%;
   animation: rotate 20s infinite;
-  filter: blur(300px);
+  filter: blur(40vh);
   z-index: 1;
   pointer-events: none;
 }

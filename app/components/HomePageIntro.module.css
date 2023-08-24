@@ -1,8 +1,7 @@
 .homepageIntroDiv {
     /* position: absolute; */
-    padding-top: 5%;
-    /* padding-left: 10%; */
-    /* margin-bottom: 20%; */
+    /* padding-top: 10vh; */
+    margin: auto;
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -13,37 +12,30 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    /* margin-top: 0; */
     width: 45rem;
-    /* margin-left: 27.5%; */
-    height: 75%;
-    /* overflow: hidden; */
+    height: 50%;
     font-weight: bold;
     justify-content: center;
-    align-items: center;
     white-space: pre;
 }
 
 .hiImConnor {
-    display: flex;
-    justify-content: start;
-    text-align: left;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
     width: 100%;
-    height: 33%;
-    /* margin-top: 2.5%; */
+    height: auto;
     font-size: 6.5rem;
-    /* line-height: 7rem; */
     z-index: 2;
 }
 
 .iAmSpan {
     margin: auto;
-    /* margin-left: 0; */
     width: 150%;
     height: 100%;
     text-align: left;
-    font-size: 3rem;
+    font-size: 3.5rem;
     /* line-height: 4rem; */
     z-index: 2;
 }

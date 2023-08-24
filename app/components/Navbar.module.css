@@ -1,41 +1,32 @@
 .navbarDiv {
-    /* margin: auto; */
     position: fixed;
-    margin-top: 2.5%;
+    margin-top: 5vh;
     margin-bottom: 5vh;
-    /* width: 100vw; */
     display: flex;
-    left: 3%;
+    margin-left: 5vh;
     z-index: 10;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* transition: transform 1s ease-in-out;    */
 }
 
 .menuIcon {
     position: relative;
-    /* margin-bottom: 10%; */
-    top: 0.25rem;
-    left: 0;
     scale: 3;
     transition: transform 0.5s ease-in-out;
 }
 
 .menuIcon:hover {
-    cursor: pointer;
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
     transform: scale(1.1)
 }
 
 .navbarUl, .hiddenNavBarUl {
     position: relative;
-    margin-top: 50%;
+    margin-top: 30%;
     display: flex;
     flex-direction: column;
     /* width: 100%; */
     left: -20%;
     text-align: left;
-    font-size: 200%;
+    font-size: 2rem;
     font-weight: bold;
     padding-left: 0;
     list-style: none;
@@ -43,20 +34,21 @@
 }
 
 .navbarUl {
-    transition: transform 1s ease-out;
+    opacity: 1; /* Set initial opacity */
+    transition: transform 1s ease-out, opacity 1s ease-in-out; /* Apply transition to both transform and opacity */
     transform: translateX(0%);
 }
 
 .hiddenNavBarUl {
-    /* animation: hideNavbar 1s ease-in-out forwards; */
-    /* left: 100px; */
-    transition: transform 1s ease-in;
-    transform: translateX(-200%);
+    opacity: 0; /* Set initial opacity */
+    transition: transform 1s ease-in, opacity 1s ease-in-out; /* Apply transition to both transform and opacity */
+    transform: translateX(-140%);
 }
+/* animation: hideNavbar 1s ease-in-out forwards; */
 
 
 .navbarUl li, .hiddenNavBarUl li {
     text-decoration: none;
     color: black;
-    cursor: pointer;
+    cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }
