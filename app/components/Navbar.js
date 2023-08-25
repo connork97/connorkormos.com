@@ -7,20 +7,20 @@ import React, { useState, useEffect } from 'react'
 
 import { HiOutlineMenu } from 'react-icons/hi'
 
-const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
+const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef, contactRef }) => {
 
     const [isHidden, setIsHidden] = useState(false)
     const [lastScroll, setLastScroll] = useState(100)
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY
-            setIsHidden(scrollY > lastScroll)
-            setLastScroll(scrollY)
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [lastScroll])
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollY = window.scrollY
+    //         setIsHidden(scrollY > lastScroll)
+    //         setLastScroll(scrollY)
+    //     }
+    //     window.addEventListener('scroll', handleScroll)
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    // }, [lastScroll])
 
     return (
         // <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
@@ -36,6 +36,9 @@ const Navbar = ({ scrollToTarget, introRef, skillsRef, projectsRef }) => {
                 </li>
                 <li onClick={() => scrollToTarget(projectsRef)}>
                     Projects
+                </li>
+                <li onClick={() => scrollToTarget(contactRef)}>
+                    Contact
                 </li>
                 {/* <li onClick={() => scrollToTarget(introRef)}>
                     Contact

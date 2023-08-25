@@ -36,8 +36,8 @@ const Projects = forwardRef(({ projectsRef }) => {
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg", alt: "Python"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg", alt: "Flask"},
-        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg", alt: "SQLite"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg", alt: "SQLAlchemy"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg", alt: "SQLite"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg", alt: "PostgreSQL"}
     ]
 
@@ -113,9 +113,9 @@ const Projects = forwardRef(({ projectsRef }) => {
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 className={styles.codifyLink}> <Link href='https://codify-ea413.web.app/' target='_blank' className={styles.codifyLink}>Codify</Link></h2>
                     <br></br>
-                    <p className={styles.codifyDescription}>React application integrating Spotify`&apos;s public API for music discovery and personalization.</p>
+                    <p className={styles.codifyDescription}>React application integrating Spotify&apos;s public API for music discovery and personalization.</p>
                     <p className={styles.codifyDescription}>
-                    Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify`&apos;s database.
+                    Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify&apos;s database.
                     Additionally, users can play previews of available songs, and if they have their own Spotify profile logged in can click the logo to be directly linked to their desired location to save it for later.
                     </p>
                     <br></br>

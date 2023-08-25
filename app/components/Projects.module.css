@@ -1,12 +1,14 @@
 .projectsWrapperDiv {
-    margin-bottom: 10%;
-    height: 100vh;
+    padding-top: 50vh;
+    /* margin-bottom: 10%; */
+    height: auto;
+    width: 100vw;
 }
 
 .projectsH1 {
     position: relative;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 2.5%;
     padding-bottom: 5%;
     font-size: 5rem;
     font-weight: bold;

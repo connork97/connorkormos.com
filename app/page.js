@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import HomePageIntro from './components/HomePageIntro'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 import MouseEffect from './components/MouseEffect';
 
 import { BsFillCursorFill } from 'react-icons/bs'
@@ -19,6 +20,7 @@ export default function Home() {
   const introRef = useRef(null)
   const skillsRef = useRef(null)
   const projectsRef = useRef(null)
+  const contactRef = useRef(null)
 
   useEffect(() => {
     setCheck(!check)
@@ -40,6 +42,7 @@ export default function Home() {
             introRef={introRef}
             skillsRef={skillsRef}
             projectsRef={projectsRef}
+            contactRef={contactRef}
           />
           <HomePageIntro introRef={introRef} />
           <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(skillsRef)} />
@@ -50,8 +53,9 @@ export default function Home() {
           <Skills skillsRef={skillsRef} className='mainComponent' />
           {/* <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(projectsRef)} /> */}
           <Projects projectsRef={projectsRef} />
-          <MdKeyboardDoubleArrowUp className="upArrowButton" onClick={() => scrollToTarget(introRef)} />
-          <p className='footerP'>Back to Top</p>
+          <Contact contactRef={contactRef} />
+          {/* <MdKeyboardDoubleArrowUp className="upArrowButton" onClick={() => scrollToTarget(introRef)} /> */}
+          {/* <p className='footerP'>Back to Top</p> */}
       {/* </main> */}
       </div>
     )

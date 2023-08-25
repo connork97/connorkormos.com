@@ -1,7 +1,8 @@
 .skillsWrapper {
-    height: 100vh;
+    height: auto;
     width: 100vw;
-    margin-bottom: 10vh;
+    padding-bottom: 20vh;
+    /* margin-bottom: 20vh; */
 }
 
 .skillsH1 {
