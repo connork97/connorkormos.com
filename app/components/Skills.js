@@ -5,7 +5,7 @@ import { forwardRef } from 'react'
 const Skills = forwardRef(({ skillsRef }) => {
 
     return (
-        <div ref={skillsRef} className={styles.skillsWrapper}>
+        <div ref={skillsRef} className={styles.skillsWrapperDiv}>
             <h1 className={styles.skillsH1}>Skills</h1>
             <div className={styles.favoriteSkillsDiv}>
                 <h2 className={styles.divTitle} style={{paddingTop: '1.5%', paddingBottom: '0'}}>Favorite Tech</h2>

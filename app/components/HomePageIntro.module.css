@@ -12,6 +12,7 @@
 .iAmDiv {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     margin: auto;
     width: 45rem;
     height: 50%;
@@ -64,7 +65,9 @@
     }
 
     .iAmDiv {
-        max-width: 72.5%;
+        /* width: auto; */
+        /* max-width: 70%; */
+        width: 280.55px;
     }
 
     .hiImConnor {
@@ -72,7 +75,7 @@
     }
 
     .iAmSpan {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         width: 100%;
     }
 }
