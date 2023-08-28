@@ -63,7 +63,7 @@ const HomePageIntro = forwardRef(( { introRef } ) => {
         }, 100);
     };
 
-    const iAmTextArr = ["a Full Stack Web Developer", "a Software Engineer", "a critical thinker", "a team player", "detail oriented", "creative", "results driven", "a problem solver"]
+    const iAmTextArr = ["a Web Developer", "a Software Engineer", "a critical thinker", "a team player", "detail oriented", "creative", "results driven", "a problem solver"]
     const [currentIntroTextIndex, setCurrentIntroTextIndex] = useState(0)
     const [currentString, setCurrentString] = useState(iAmTextArr[currentIntroTextIndex])
 

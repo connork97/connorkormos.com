@@ -1,3 +1,4 @@
+
 .homepageIntroDiv {
     /* position: absolute; */
     /* padding-top: 10vh; */
@@ -54,6 +55,27 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .homepageIntroDiv {
+        width: 100vw;
+        height: 75vh;
+        padding-top: 25vh;
+        margin-bottom: 15vh;
+    }
+
+    .iAmDiv {
+        max-width: 72.5%;
+    }
+
+    .hiImConnor {
+        font-size: 2.5rem;
+    }
+
+    .iAmSpan {
+        font-size: 1.35rem;
+        width: 100%;
+    }
+}
 /* .downArrowButton {
     margin: auto;
     margin-bottom: 25vh;
@@ -62,33 +84,33 @@
     scale: 5;
     /* transform-: scaleX(115%) */
     /* transition: transform 0.3s ease-in-out; */
-/* } */
-
-/* .downArrowButton:hover {
-    /* scale: 5.0; */
-    /* cursor: pointer; */
-    /* transform: scale(1.2); */
-/* } */
-
-/* .technicalSkillsH1 {
-    margin-top: 50vh;
-    padding-top: 15vh;
-    text-align: center;
-}
-
-.technicalSkillsDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 15vh;
-    padding-bottom: 25vh;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-.languagesDiv, .favoriteSkillsDiv, .moreSkillsDiv {
-    width: 25%;
-    background-color: white;
-    height: 75%;
-} */
+    /* } */
+    
+    /* .downArrowButton:hover {
+        /* scale: 5.0; */
+        /* cursor: pointer; */
+        /* transform: scale(1.2); */
+        /* } */
+        
+        /* .technicalSkillsH1 {
+            margin-top: 50vh;
+            padding-top: 15vh;
+            text-align: center;
+        }
+        
+        .technicalSkillsDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top: 15vh;
+            padding-bottom: 25vh;
+            text-align: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .languagesDiv, .favoriteSkillsDiv, .moreSkillsDiv {
+            width: 25%;
+            background-color: white;
+            height: 75%;
+        } */

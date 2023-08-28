@@ -52,3 +52,47 @@
     color: black;
     cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .navbarDiv {
+        width: 100vw;
+        height: 10vh;
+        margin: 0;
+        overflow: hidden;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .menuIcon {
+        scale: 2;
+        right: 5%;
+    }
+    .navbarUl, .hiddenNavBarUl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 4%;
+        left: 0%;
+        font-size: 1rem;
+    }
+    .navbarUl {
+        opacity: 1; /* Set initial opacity */
+        transition: transform 1s ease-out, opacity 1s ease-in-out; /* Apply transition to both transform and opacity */
+        transform: translateY(0%);
+    }
+    
+    .hiddenNavBarUl {
+        opacity: 0; /* Set initial opacity */
+        transition: transform 1s ease-in, opacity 1s ease-in-out; /* Apply transition to both transform and opacity */
+        transform: translateY(-200%);
+    }
+    .navbarUl li, .hiddenNavBarUl li {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: auto 5%;
+    }
+
+}

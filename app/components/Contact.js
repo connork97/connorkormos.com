@@ -12,11 +12,11 @@ const Contact = forwardRef(({ contactRef }) => {
         <div ref={contactRef} className={styles.contactWrapperDiv}>
             <h1 className={styles.contactH1}>Contact Me:</h1>
             <div className={styles.contactIconsDiv}>
-                <Link href='http://www.github.com/connork97' className={styles.contactIconLink}>
+                <Link href='http://www.github.com/connork97' target='_blank' className={styles.contactIconLink}>
                     <FaGithub className={styles.contactIcon} />
                     <span className={styles.contactSpan}>Github</span>
                 </Link>
-                <Link href='http://wwww.linked.in/connorkormos' className={styles.contactIconLink}>
+                <Link href='https://www.linkedin.com/in/connorkormos/' target='_blank' className={styles.contactIconLink}>
                     <BsLinkedin className={styles.contactIcon} />
                     <span className={styles.contactSpan}>LinkedIn</span>
                 </Link>

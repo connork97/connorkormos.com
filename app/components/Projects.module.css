@@ -99,7 +99,7 @@
     cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
 }
 
-.projectDescription {
+.peakSyncDescription, .codifyDescription {
     width: 75%;
     position: relative;
     text-align: justify;
@@ -107,15 +107,7 @@
     z-index: 2;
 }
 
-.codifyDescription {
-    position: relative;
-    width: 75%;
-    text-align: justify;
-    font-size: 1.25rem;
-    z-index: 2;
-}
-
-.link {
+.peakSyncLink {
     font-size: 2.5rem;
     position: relative;
     color: black;
@@ -131,6 +123,77 @@
     z-index: 2;
 }
 
-.link:hover {
+.peakSyncLink:hover {
     cursor: url('../../public/images/hand-pointer-solid.svg'), auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectsH1 {
+        font-size: 3rem;
+        margin-bottom: 5vh;
+    }
+    .carouselWrapperDiv {
+        display: flex;
+        flex-direction: column;
+    }
+    .projectCarousel {
+        width: 75%;
+        margin-top: 2.5vh;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+    }
+    .carouselImage {
+        width: auto;
+        height: 12.5rem;
+        /* height: ; */
+    }
+    .peakSyncDescriptionDiv, .codifyDescriptionDiv {
+        margin: 2.5vh auto;
+        width: 100%;
+        right: auto;
+    }
+    .peakSyncDescription, .codifyDescription {
+        margin: 2.5vh auto;
+        width: 90%;
+    }
+    .peakSyncLink, .codifyLink {
+        position: relative;
+        margin: auto;
+        /* padding-top: 5vh; */
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .peakSyncTechUsedDiv, .codifyTechUsedDiv {
+        margin: auto;
+        width: 90%;
+    }
+    .techUsed {
+        height: 3rem;
+    }
+    /* .carouselImage {
+    margin: auto;
+    height: 28rem;
+    max-height: 45vh;
+    width: auto;
+} */
+    /* .projectCarousel { */
+    /* position: relative; */
+    /* margin: auto; */
+    /* margin-right: 2.5%; */
+    /* text-align: center;
+    height: 32.5rem;
+    max-height: 50vh;
+    width: 50%;
+    z-index: 2; */
+/* } */
+    /* .carouselWrapperDiv {
+    margin: auto;
+    margin-bottom: 7.5%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px !important;
+} */
 }

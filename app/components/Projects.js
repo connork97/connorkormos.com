@@ -2,13 +2,36 @@
 import Image from 'next/image'
 
 import Link from 'next/link'
-import React, { useState, forwardRef } from 'react'
+import React, { useState, forwardRef, useEffect } from 'react'
 
 import styles from './Projects.module.css'
 
 import Carousel from 'react-bootstrap/Carousel'
 
 const Projects = forwardRef(({ projectsRef }) => {
+
+    const [isMobile, setIsMobile] = useState(false)
+
+
+    useEffect(() => {
+        // Define the media query
+        const mediaQuery = window.matchMedia('(max-width: 600px)');
+    
+        // Initial check
+        setIsMobile(mediaQuery.matches);
+    
+        // Add a listener for media query changes
+        const handleMediaQueryChange = (event) => {
+          setIsMobile(event.matches);
+        };
+        
+        mediaQuery.addEventListener('change', handleMediaQueryChange);
+    
+        // Clean up the listener when the component unmounts
+        return () => {
+          mediaQuery.removeEventListener('change', handleMediaQueryChange);
+        };
+      }, []);
 
     const peakSyncImageArr = [
         'AdminDashboardPreview.jpg',
@@ -92,14 +115,15 @@ const Projects = forwardRef(({ projectsRef }) => {
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
             <h1 className={styles.projectsH1}>Projects</h1>
             <div className={styles.carouselWrapperDiv}>
+                {isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.peakSyncLink}>Peak Sync</Link></h2>}
                 <Carousel className={styles.projectCarousel} variant='dark'>
                     {renderPeakSyncCarouselItems}
                 </Carousel>
                 <div className={styles.peakSyncDescriptionDiv}>
-                    <h2> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.link}>Peak Sync</Link></h2>
+                {!isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.peakSyncLink}>Peak Sync</Link></h2>}
                     <br></br>
-                    <p className={styles.projectDescription}>Tailored to the fitness industry, this software is used to create and manage a database of users, events, offerings, and more.</p>
-                    <p className={styles.projectDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.
+                    <p className={styles.peakSyncDescription}>Tailored to the fitness industry, this software is used to create and manage a database of users, events, offerings, and more.</p>
+                    <p className={styles.peakSyncDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.
                     Back-end built out with Python, Flask, SQLAlchemy, and PostgreSQL to properly manage large relational database with just a few clicks by users.</p>
                     <br></br>
                     <div className={styles.peakSyncTechUsedDiv}>
@@ -113,6 +137,11 @@ const Projects = forwardRef(({ projectsRef }) => {
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 className={styles.codifyLink}> <Link href='https://codify-ea413.web.app/' target='_blank' className={styles.codifyLink}>Codify</Link></h2>
                     <br></br>
+                    {isMobile &&
+                        <Carousel className={styles.projectCarousel} variant='dark'>
+                            {renderCodifyCarouselItems}
+                        </Carousel>
+                    }
                     <p className={styles.codifyDescription}>React application integrating Spotify&apos;s public API for music discovery and personalization.</p>
                     <p className={styles.codifyDescription}>
                     Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify&apos;s database.
@@ -123,9 +152,11 @@ const Projects = forwardRef(({ projectsRef }) => {
                         {renderTechUsed(codifyTechUsedArr)}
                     </div>
                 </div>
-                <Carousel className={styles.projectCarousel} variant='dark'>
-                    {renderCodifyCarouselItems}
-                </Carousel>
+                {!isMobile &&
+                    <Carousel className={styles.projectCarousel} variant='dark'>
+                        {renderCodifyCarouselItems}
+                    </Carousel>
+                }
             </div>
         </div>
     )

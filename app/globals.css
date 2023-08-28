@@ -49,8 +49,13 @@ body {
 
 #container {
   margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   background: none;
+  overflow: hidden !important;
   z-index: 1;
 }
 
@@ -61,15 +66,19 @@ body {
   z-index: 1;
 }
 
+#blob, #blur {
+  overflow: hidden;
+}
+
 #blob {
-  position: absolute;
+  position: fixed;
   background-color: white;
   background: linear-gradient(
       to right,
       white,
       white
   );
-  height: 120vh;
+  height: 100vh;
   aspect-ratio: 1;
   border-radius: 100%;
   left: 50%;
@@ -88,7 +97,7 @@ body {
   background: none;
   backdrop-filter: blur(300px);
 }
-
+/* 
 @keyframes rotate {
   from {
       rotate: 0deg;
@@ -101,7 +110,46 @@ body {
   to {
       rotate: 360deg;
   }
+} */
+@media (max-width: 768px) {
+  .downArrowButton, .upArrowButton {
+    scale: 4;
+  }
+  #blob,
+  #blur {
+    position: fixed; /* Change to fixed for mobile devices */
+    overflow: hidden;
+  }
+
+  #blob {
+    top: 50%; /* Center vertically */
+    height: 70vh;
+    filter: blur(15vh);
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  }
+  #blur {
+    backdrop-filter: blur(100px);
+  }
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1, 1.5);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* @media only screen and (max-width: 768px) {
+  #blob, #blur {
+    overflow: hidden;
+  }
+} */
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
