@@ -1,7 +1,8 @@
 .skillsWrapperDiv {
     height: auto;
     width: 100vw;
-    padding-bottom: 20vh;
+    padding-top: 5vh;
+    padding-bottom: 65vh;
     /* margin-bottom: 20vh; */
 }
 
@@ -127,7 +128,7 @@
         margin-bottom: 2.5%;
     }
     .divTitle {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .favoriteSkillsIconsDiv {
         padding-bottom: 5%;

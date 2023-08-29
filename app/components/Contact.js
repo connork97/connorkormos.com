@@ -10,7 +10,7 @@ import { MdEmail } from 'react-icons/md'
 const Contact = forwardRef(({ contactRef }) => {
     return (
         <div ref={contactRef} className={styles.contactWrapperDiv}>
-            <h1 className={styles.contactH1}>Contact Me:</h1>
+            <h1 className={styles.contactH1}>Let&apos;s get in touch!</h1>
             <div className={styles.contactIconsDiv}>
                 <Link href='http://www.github.com/connork97' target='_blank' className={styles.contactIconLink}>
                     <FaGithub className={styles.contactIcon} />

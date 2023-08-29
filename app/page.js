@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState, useRef } from 'react'
 import Navbar from './components/Navbar';
 import HomePageIntro from './components/HomePageIntro'
+import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -39,6 +40,7 @@ export default function Home() {
   const [check, setCheck] = useState(false)
 
   const introRef = useRef(null)
+  const aboutRef = useRef(null)
   const skillsRef = useRef(null)
   const projectsRef = useRef(null)
   const contactRef = useRef(null)
@@ -61,12 +63,14 @@ export default function Home() {
           <Navbar 
             scrollToTarget={scrollToTarget} 
             introRef={introRef}
+            aboutRef={aboutRef}
             skillsRef={skillsRef}
             projectsRef={projectsRef}
             contactRef={contactRef}
           />
           <HomePageIntro introRef={introRef} />
           <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(skillsRef)} />
+          <About aboutRef={aboutRef} />
           {/* <MdKeyboardDoubleArrowUp
             className="upArrowButton"
             onClick={() => scrollToTarget(introRef)} 

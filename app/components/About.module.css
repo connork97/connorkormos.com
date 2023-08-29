@@ -1,0 +1,42 @@
+.aboutWrapperDiv {
+    padding-top: 6vh;
+    height: auto;
+    width: 100vw;
+    padding-bottom: 20vh;
+}
+
+.helloH1, .aboutP, .regardsP {
+    position: relative;
+    margin: auto;
+    width: 58.5%;
+    z-index: 2;
+}
+
+.helloH1 {
+    font-size: 2.75rem;
+    font-weight: bold;
+}
+
+.aboutP {
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+.regardsP {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .helloH1, .aboutP, .regardsP {
+        width: 80%;
+    }
+    .helloH1, .regardsP {
+        font-size: 2rem;
+    }
+
+    .aboutP {
+        font-size: 1.35rem;;
+        hyphens: auto;
+    }
+}
