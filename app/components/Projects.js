@@ -7,31 +7,11 @@ import React, { useState, forwardRef, useEffect } from 'react'
 import styles from './Projects.module.css'
 
 import Carousel from 'react-bootstrap/Carousel'
+import useMediaQuery from '../utils/useMediaQuery'
 
 const Projects = forwardRef(({ projectsRef }) => {
 
-    const [isMobile, setIsMobile] = useState(false)
-
-
-    useEffect(() => {
-        // Define the media query
-        const mediaQuery = window.matchMedia('(max-width: 600px)');
-    
-        // Initial check
-        setIsMobile(mediaQuery.matches);
-    
-        // Add a listener for media query changes
-        const handleMediaQueryChange = (event) => {
-          setIsMobile(event.matches);
-        };
-        
-        mediaQuery.addEventListener('change', handleMediaQueryChange);
-    
-        // Clean up the listener when the component unmounts
-        return () => {
-          mediaQuery.removeEventListener('change', handleMediaQueryChange);
-        };
-      }, []);
+    const isMobile = useMediaQuery('(max-width: 768px)')
 
     const peakSyncImageArr = [
         'AdminDashboardPreview.jpg',

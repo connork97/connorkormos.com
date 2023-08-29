@@ -21,11 +21,32 @@ const Navbar = ({ scrollToTarget, introRef, aboutRef, skillsRef, projectsRef, co
     //     window.addEventListener('scroll', handleScroll)
     //     return () => window.removeEventListener('scroll', handleScroll)
     // }, [lastScroll])
+    const [lastScrollY, setLastScrollY] = useState(0);
 
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > lastScrollY) {
+        setIsHidden(true); // Scrolling down, hide navbar
+      } else {
+        setIsHidden(false); // Scrolling up, show navbar
+      }
+  
+      setLastScrollY(currentScrollY);
+    };
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, [lastScrollY]);
     return (
         // <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
         // <div className={`${styles.navbarDiv} ${isHidden ? styles.hidden : null}`}>
-        <div className={styles.navbarDiv}>
+        // <div className={styles.navbarDiv}>
+        <div className={`${styles.navbarDiv} ${isHidden ? styles.hiddenNavbar : ''}`}>
+
             <HiOutlineMenu className={styles.menuIcon} onClick={() => setIsHidden(!isHidden)} />
             <ul className={isHidden ? styles.hiddenNavBarUl : styles.navbarUl}>
                 <li onClick={() => scrollToTarget(introRef)}>
@@ -43,9 +64,6 @@ const Navbar = ({ scrollToTarget, introRef, aboutRef, skillsRef, projectsRef, co
                 <li onClick={() => scrollToTarget(contactRef)}>
                     Contact
                 </li>
-                {/* <li onClick={() => scrollToTarget(introRef)}>
-                    Contact
-                </li> */}
             </ul>
         </div>
     )
