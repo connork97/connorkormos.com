@@ -40,11 +40,12 @@ const Skills = forwardRef(({ skillsRef }) => {
             </div>
             <div className={styles.skillsDiv}>
                 <div className={styles.moreSkillsDiv}>
-                    <h2 className={styles.divTitle}>Libraries, Frameworks, and More</h2>
+                    <h2 className={styles.divTitle}>Libraries, Frameworks, & Beyond</h2>
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" 
                         className={`${styles.moreSkillsTechImage}`}
                         alt="err"
+                        style={{scale: '1.25', marginRight: '2%'}}
                         />
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
@@ -55,12 +56,13 @@ const Skills = forwardRef(({ skillsRef }) => {
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg"
                         alt="err"
                         className={`${styles.moreSkillsTechImage}`}
-                        style={{scale: '1.75'}}
+                        style={{scale: '2', marginRight: '8%'}}
                         />
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
                         className={`${styles.moreSkillsTechImage}`}
                         alt="err"
+                        style={{scale: '1.4'}}
                     />
                     <br></br>
                     <br></br>
@@ -73,6 +75,7 @@ const Skills = forwardRef(({ skillsRef }) => {
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" 
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         alt="err"
+                        style={{scale: '1.4'}}
                     />
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" 
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
@@ -91,22 +94,24 @@ const Skills = forwardRef(({ skillsRef }) => {
                     /> */}
                 </div>
                 <div className={styles.toolsDiv}>
-                    <h2 className={styles.divTitle}>More Tools</h2>
+                    <h2 className={styles.divTitle} style={{margin: '2% auto'}}>More Tools</h2>
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" 
-                        className={`${styles.toolsTechImage}`}
+                        className={`${styles.toolsTechImage} ${styles.techImageWide}`}
                         alt="err"
                     />
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" 
-                        className={`${styles.toolsTechImage}`}
+                        className={`${styles.toolsTechImage} ${styles.techImageWide}`}
                         alt="err"
+                        style={{scale: '1.3'}}
                     />
                     <br></br>
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" 
                         className={`${styles.toolsTechImage} ${styles.techImageWide}`}
                         alt="err"
+                        style={{scale: '1.15'}}
                         />
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" 
@@ -118,7 +123,7 @@ const Skills = forwardRef(({ skillsRef }) => {
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain-wordmark.svg" 
                         alt="err"
                         className={`${styles.toolsTechImage} ${styles.techImageUp}`}
-                        style={{scale: '2', marginRight: '5%'}}
+                        style={{scale: '2.25', marginRight: '5%'}}
                     />
                 </div>
             </div>
