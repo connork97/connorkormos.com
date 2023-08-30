@@ -5,48 +5,45 @@ import styles from './Navbar.module.css'
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
 
+import useMediaQuery from '../utils/useMediaQuery';
+
 import { HiOutlineMenu } from 'react-icons/hi'
 
 const Navbar = ({ scrollToTarget, introRef, aboutRef, skillsRef, projectsRef, contactRef }) => {
 
-    const [isHidden, setIsHidden] = useState(false)
-    const [lastScroll, setLastScroll] = useState(100)
+    const isMobile = useMediaQuery('(max-width: 768px)')
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const scrollY = window.scrollY
-    //         setIsHidden(scrollY > lastScroll)
-    //         setLastScroll(scrollY)
-    //     }
-    //     window.addEventListener('scroll', handleScroll)
-    //     return () => window.removeEventListener('scroll', handleScroll)
-    // }, [lastScroll])
+    const [isHidden, setIsHidden] = useState(true)
+
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-  
-      if (currentScrollY > lastScrollY) {
-        setIsHidden(true); // Scrolling down, hide navbar
-      } else {
-        setIsHidden(false); // Scrolling up, show navbar
-      }
-  
-      setLastScrollY(currentScrollY);
-    };
+        const currentScrollY = window.scrollY;
+        const scrollThreshold = window.innerHeight * 0.02;
+      
+        if (currentScrollY > lastScrollY + scrollThreshold) {
+          setIsHidden(true); // Scrolling down, hide navbar
+        } else if (currentScrollY < lastScrollY - scrollThreshold) {
+          setIsHidden(false); // Scrolling up, show navbar
+        }
+      
+        setLastScrollY(currentScrollY);
+      };
   
     useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, [lastScrollY]);
-    return (
-        // <ul className="flex fixed items-center top-10 space-x-20 font-bold text-3xl">
-        // <div className={`${styles.navbarDiv} ${isHidden ? styles.hidden : null}`}>
-        // <div className={styles.navbarDiv}>
-        <div className={`${styles.navbarDiv} ${isHidden ? styles.hiddenNavbar : ''}`}>
+        setIsHidden(!isMobile)
+    }, [isMobile])
 
+    useEffect(() => {
+        if (isMobile) {
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [isMobile, lastScrollY]);
+    return (
+        <div className={`${styles.navbarDiv} ${isHidden ? styles.hiddenNavbar : ''}`}>
             <HiOutlineMenu className={styles.menuIcon} onClick={() => setIsHidden(!isHidden)} />
             <ul className={isHidden ? styles.hiddenNavBarUl : styles.navbarUl}>
                 <li onClick={() => scrollToTarget(introRef)}>

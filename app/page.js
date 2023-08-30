@@ -41,7 +41,7 @@ export default function Home() {
             contactRef={contactRef}
           />
           <HomePageIntro introRef={introRef} />
-          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(skillsRef)} />
+          <MdKeyboardDoubleArrowDown className="downArrowButton" onClick={() => scrollToTarget(aboutRef)} />
           <About aboutRef={aboutRef} />
           {/* <MdKeyboardDoubleArrowUp
             className="upArrowButton"
