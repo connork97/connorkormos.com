@@ -142,10 +142,10 @@ const Projects = forwardRef(({ projectsRef }) => {
                     }
                     <p className={styles.codifyDescription}><a href='https://www.nytimes.com/games/wordle/index.html' target='blank' style={{color: 'black'}}>Wordle</a> inspired RGB color guessing game.</p>
                     <p className={styles.codifyDescription}>
-                    You have six tried to guess the RGB value of the color on the screen.  Don't worry!  You'll get hints along the way to help you out.
+                    You have six tried to guess the RGB value of the color on the screen.  Don&apos;t worry!  You&apos;ll get hints along the way to help you out.
                     </p>
                     <p className={styles.codifyDescription}>
-                    Front-end built with a mobile first approach using React and CSS, back-end with Python, Flask, and PostgreSQL.  The static site is hosted on Google's Firebase, web service on Render, and PostgreSQL database on AWS.
+                    Front-end built with a mobile first approach using React and CSS, back-end with Python, Flask, and PostgreSQL.  The static site is hosted on Google Firebase, web service on Render, and PostgreSQL database on AWS.
                     </p>
                     {/* Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify&apos;s database. */}
                     {/* Additionally, users can play previews of available songs, and if they have their own Spotify profile logged in can click the logo to be directly linked to their desired location to save it for later. */}
