@@ -33,6 +33,26 @@ const Projects = forwardRef(({ projectsRef }) => {
         'CodifyPlaylistPage.jpg'
     ]
 
+    const shadleImageArr = [
+        'ShadleHomepage.jpg',
+        'ShadleGuesses.jpg',
+        'ShadleInstructionsModal.jpg',
+        'ShadleWinModal.jpg',
+        'ShadleLossModal.jpg',
+        'ShadlePersonalStats.jpg',
+        'ShadleSiteStats.jpg'
+    ]
+
+    const shadleTechUsedArr = [
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg", alt: "React.js"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg", alt: "Python"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg", alt: "Flask"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg", alt: "SQLAlchemy"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg", alt: "PostgreSQL"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", alt: "AWS"}
+    ]
+
     const peakSyncTechUsedArr = [
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg", alt: "React.js"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg", alt: "React-Bootstrap"},
@@ -85,6 +105,23 @@ const Projects = forwardRef(({ projectsRef }) => {
         )
     })
 
+    const renderShadleCarouselItems = shadleImageArr.map((image) => {
+        return (
+            <Carousel.Item key={image} interval={6000}>
+                <Image
+                    // className='d-block w-100'
+                    className={`${styles.carouselImage} rounded-4`}
+                    src={`/shadle/${image}`}
+                    alt={image}
+                    height='360'
+                    width='640'
+                    quality={100}
+                    key={image}
+                    />
+            </Carousel.Item>
+        )
+    })
+
     const renderTechUsed = (array) => {
         return array.map((tech) => {
             return <img src={tech.source} alt={tech.alt} className={styles.techUsed} key={tech.source} />
@@ -94,6 +131,35 @@ const Projects = forwardRef(({ projectsRef }) => {
     return (
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
             <h1 className={styles.projectsH1}>Projects</h1>
+            <div className={styles.carouselWrapperDiv}>
+                <div className={styles.codifyDescriptionDiv}>
+                <h2 className={styles.codifyLink}> <Link href='https://shadle.web.app/' target='_blank' className={styles.codifyLink}>Shadle</Link></h2>
+                    <br></br>
+                    {isMobile &&
+                        <Carousel className={styles.projectCarousel} variant='dark'>
+                            {renderShadleCarouselItems}
+                        </Carousel>
+                    }
+                    <p className={styles.codifyDescription}><a href='https://www.nytimes.com/games/wordle/index.html' target='blank' style={{color: 'black'}}>Wordle</a> inspired RGB color guessing game.</p>
+                    <p className={styles.codifyDescription}>
+                    You have six tried to guess the RGB value of the color on the screen.  Don't worry!  You'll get hints along the way to help you out.
+                    </p>
+                    <p className={styles.codifyDescription}>
+                    Front-end built with a mobile first approach using React and CSS, back-end with Python, Flask, and PostgreSQL.  The static site is hosted on Google's Firebase, web service on Render, and PostgreSQL database on AWS.
+                    </p>
+                    {/* Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify&apos;s database. */}
+                    {/* Additionally, users can play previews of available songs, and if they have their own Spotify profile logged in can click the logo to be directly linked to their desired location to save it for later. */}
+                    <br></br>
+                    <div className={styles.peakSyncTechUsedDiv}>
+                        {renderTechUsed(shadleTechUsedArr)}
+                    </div>
+                </div>
+                {!isMobile &&
+                    <Carousel className={styles.projectCarousel} variant='dark'>
+                        {renderShadleCarouselItems}
+                    </Carousel>
+                }
+            </div>
             <div className={styles.carouselWrapperDiv}>
                 {isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.peakSyncLink}>Peak Sync</Link></h2>}
                 <Carousel className={styles.projectCarousel} variant='dark'>
