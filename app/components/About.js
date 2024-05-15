@@ -5,7 +5,7 @@ import React, { forwardRef } from 'react'
 const About = forwardRef(({ aboutRef }) => {
     return (
         <div className={styles.aboutWrapperDiv} ref={aboutRef}>
-            <h1 className={styles.helloH1}>Hey there,</h1>
+            {/* <h1 className={styles.helloH1}>Hey there,</h1>
             <br></br><br></br>
             <p className={styles.aboutP}>
                 I&apos;m Connor Kormos, a full-stack web developer based in the heart of Reno, Nevada.
@@ -38,7 +38,7 @@ const About = forwardRef(({ aboutRef }) => {
             <br></br><br></br>
             <p className={styles.regardsP}>Regards,</p>
             <br></br>
-            <p className={styles.regardsP}>Connor Kormos</p>
+            <p className={styles.regardsP}>Connor Kormos</p> */}
         </div>
     )
 })

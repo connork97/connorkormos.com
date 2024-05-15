@@ -49,9 +49,9 @@ const Navbar = ({ scrollToTarget, introRef, aboutRef, skillsRef, projectsRef, co
                 <li onClick={() => scrollToTarget(introRef)}>
                     Home
                 </li>
-                <li onClick={() => scrollToTarget(aboutRef)}>
+                {/* <li onClick={() => scrollToTarget(aboutRef)}>
                     About
-                </li>
+                </li> */}
                 <li onClick={() => scrollToTarget(skillsRef)}>
                     Skills
                 </li>

@@ -168,7 +168,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                 <div className={styles.peakSyncDescriptionDiv}>
                 {!isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://peaksync.onrender.com/' target='_blank' className={styles.peakSyncLink}>Peak Sync</Link></h2>}
                     <br></br>
-                    <p className={styles.peakSyncDescription}>Tailored to the fitness industry, this software is used to create and manage a database of users, events, offerings, and more.</p>
+                    <p className={styles.peakSyncDescription}>Database management system, tailored to the fitness industry.</p>
                     <p className={styles.peakSyncDescription}>Front-end is built out with React.js, React-Bootstrap, and CSS with a heavy focus on ease of use for both the business and its customers.
                     Back-end built out with Python, Flask, SQLAlchemy, and PostgreSQL to properly manage large relational database with just a few clicks by users.</p>
                     <br></br>
