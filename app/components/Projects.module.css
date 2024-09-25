@@ -8,9 +8,9 @@
 .projectsH1 {
     position: relative;
     text-align: center;
-    padding-top: 2.5%;
+    /* padding-top: 2.5%; */
     padding-bottom: 5%;
-    font-size: 5rem;
+    font-size: 3vw;
     font-weight: bold;
     z-index: 2;
 }

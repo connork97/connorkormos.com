@@ -20,9 +20,9 @@ const Contact = forwardRef(({ contactRef }) => {
                     <BsLinkedin className={styles.contactIcon} />
                     <span className={styles.contactSpan}>LinkedIn</span>
                 </Link>
-                <div className={styles.contactIconLink} onClick={() => window.location.href = 'mailto:connorkormos97@gmail.com'}>
+                <div className={styles.contactIconLink} onClick={() => window.location.href = 'mailto:connorkormos@gmail.com'}>
                     <MdEmail className={styles.contactIcon} />
-                    <span className={styles.contactSpan}>connorkormos97@gmail.com</span>
+                    <span className={styles.contactSpan}>connorkormos@gmail.com</span>
                 </div>
                 <div className={styles.resumeDiv} onClick={() => window.open('/images/ConnorKormosResume.pdf')}>
                     <BsBriefcaseFill className={styles.contactIcon} onClick={() => window.open('/images/ConnorKormosResume.pdf')} />

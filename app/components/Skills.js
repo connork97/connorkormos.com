@@ -57,43 +57,39 @@ const Skills = forwardRef(({ skillsRef }) => {
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         style={{scale: '1.4', marginRight: '8%'}}
                     />
-                    <img 
+                    {/* <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg"
                         alt="err"
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         style={{scale: '2'}}
-                    />
+                    /> */}
                     {/* <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         alt="err"
                         style={{scale: '1.4'}}
                     /> */}
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <img
+                    {/* <img
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original-wordmark.svg"
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         style={{scale: '1.4'}}
-                    />
+                        /> */}
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" 
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         alt="err"
-                    />
+                        />
+                        <br></br>
+                        <br></br>
+                        <br></br>
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                         alt="err"
                     />
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <img
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg"
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                     />
-                    
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" 
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
@@ -109,9 +105,7 @@ const Skills = forwardRef(({ skillsRef }) => {
                         className={`${styles.moreSkillsTechImage} ${styles.techImageUp}`}
                     />
 
-                    <br></br>
-                    <br></br>
-                    <br></br>
+
                     {/* <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original-wordmark.svg"
                         className={styles.techImage}
@@ -143,17 +137,12 @@ const Skills = forwardRef(({ skillsRef }) => {
                         alt="err"
                         style={{scale: 1.75}}
                         />
-                    <img 
+                    {/* <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" 
                         className={`${styles.toolsTechImage} ${styles.techImageWide}`}
                         style={{scale: 1.3}}
                         alt="err"
-                    />
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
+                    /> */}
                     <img 
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
                         alt="err"
