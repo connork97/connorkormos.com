@@ -43,6 +43,15 @@ const Projects = forwardRef(({ projectsRef }) => {
         'ShadleSiteStats.jpg'
     ]
 
+    const iogearProductPagesTechUsedArr = [
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg", alt: "HTML"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg", alt: "Bootstrap"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg", alt: "JQuery"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg", alt: "MySQL"},
+
+    ];
+
     const shadleTechUsedArr = [
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg", alt: "React.js"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
@@ -131,6 +140,62 @@ const Projects = forwardRef(({ projectsRef }) => {
     return (
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
             <h1 className={styles.projectsH1}>Projects</h1>
+            <div className={styles.carouselWrapperDiv}>
+                <div className={styles.codifyDescriptionDiv}>
+                <h2 className={styles.codifyLink}>Iogear Product Pages</h2>
+                    <br></br>
+                    {/* {isMobile && */}
+                        {/* // <Carousel className={styles.projectCarousel} variant='dark'> */}
+                        {/* //     {renderShadleCarouselItems} */}
+                        {/* // </Carousel> */}
+                    
+                    <p className={styles.codifyDescription}>A few examples of projects I have worked on during my time with <a href='https://support.iogear.com/' target='blank' style={{color: 'black'}}>Iogear</a>.
+                        These particular products are the <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/ghdsw8k4' target='_blank'>GHDSW8K4</Link>, <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/ghdsw4k3' target='_blank'>GHDSW4K3</Link>, and <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/gcs1602cc' target='_blank'>GCS1602CC</Link>.
+                    </p>
+                    <p className={styles.codifyDescription}>
+                    The front-end was built using JQuery and HTML, with the styling both using basic CSS as well as Bootstrap.
+                    Details of the products were stored in a MySQL database and accessed through it.
+                    </p>
+                    <p className={styles.codifyDescription}>
+                        I worked with the design team to bring their vision of the product page to life, while maintaining a layout consistent with the website as a whole.
+                    </p>
+                    {/* Built out with React.js, React-Bootstrap, and CSS, users can search for any song, artist, album, or playlist available in Spotify&apos;s database. */}
+                    {/* Additionally, users can play previews of available songs, and if they have their own Spotify profile logged in can click the logo to be directly linked to their desired location to save it for later. */}
+                    <br></br>
+                    <div className={styles.peakSyncTechUsedDiv}>
+                        {renderTechUsed(iogearProductPagesTechUsedArr)}
+                    </div>
+                </div>
+                {!isMobile &&
+                    <div className={styles.projectVideoWrapperDiv}>
+                    <iframe
+                        className={`${styles.iogearProductPageVideo} rounded-4`}
+                        height="440"
+                        width="780"
+                        src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
+                        autoplay='true'
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer;
+                            autoplay;
+                            fullscreen;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    >
+                    </iframe>
+                    </div>
+                }
+                {/* {!isMobile &&
+                    <Carousel className={styles.projectCarousel} variant='dark'>
+                        {renderShadleCarouselItems}
+                    </Carousel>
+                } */}
+            </div>
             <div className={styles.carouselWrapperDiv}>
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 className={styles.codifyLink}> <Link href='https://shadle.web.app/' target='_blank' className={styles.codifyLink}>Shadle</Link></h2>
