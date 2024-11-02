@@ -49,7 +49,15 @@ const Projects = forwardRef(({ projectsRef }) => {
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg", alt: "Bootstrap"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg", alt: "JQuery"},
         {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg", alt: "MySQL"},
+    ];
 
+    const iogearCes2024TechUsedArr = [
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg", alt: "HTML"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg", alt: "CSS"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg", alt: "Bootstrap"},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg", alt: "JQuery"},
+        {source: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', alt: 'PHP'},
+        {source: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg", alt: "MySQL"},
     ];
 
     const shadleTechUsedArr = [
@@ -138,23 +146,45 @@ const Projects = forwardRef(({ projectsRef }) => {
     }
 
     return (
+
+        // ! IOGEAR PRODUCT PAGES
+
         <div ref={projectsRef} className={styles.projectsWrapperDiv}>
             <h1 className={styles.projectsH1}>Projects</h1>
             <div className={styles.carouselWrapperDiv}>
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 className={styles.codifyLink}>Iogear Product Pages</h2>
                     <br></br>
-                    {/* {isMobile && */}
-                        {/* // <Carousel className={styles.projectCarousel} variant='dark'> */}
-                        {/* //     {renderShadleCarouselItems} */}
-                        {/* // </Carousel> */}
-                    
+                     {isMobile && 
+                        <div className={styles.projectVideoWrapperDiv}>
+                            <iframe
+                                className={`${styles.iogearProductPageVideo} rounded-4`}
+                                height="440"
+                                width="780"
+                                src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
+                                autoplay='true'
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer;
+                                    autoplay;
+                                    fullscreen;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                    web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            >
+                            </iframe>
+                        </div>
+                    }
                     <p className={styles.codifyDescription}>A few examples of projects I have worked on during my time with <a href='https://support.iogear.com/' target='blank' style={{color: 'black'}}>Iogear</a>.
                         These particular products are the <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/ghdsw8k4' target='_blank'>GHDSW8K4</Link>, <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/ghdsw4k3' target='_blank'>GHDSW4K3</Link>, and <Link className={styles.iogearProductLink} href='https://support.iogear.com/product/gcs1602cc' target='_blank'>GCS1602CC</Link>.
                     </p>
                     <p className={styles.codifyDescription}>
-                    The front-end was built using JQuery and HTML, with the styling both using basic CSS as well as Bootstrap.
-                    Details of the products were stored in a MySQL database and accessed through it.
+                        The front-end was built using JQuery and HTML, with the styling both using basic CSS as well as Bootstrap.
+                        Details of the products were stored in a MySQL database and accessed through it.
                     </p>
                     <p className={styles.codifyDescription}>
                         I worked with the design team to bring their vision of the product page to life, while maintaining a layout consistent with the website as a whole.
@@ -168,34 +198,69 @@ const Projects = forwardRef(({ projectsRef }) => {
                 </div>
                 {!isMobile &&
                     <div className={styles.projectVideoWrapperDiv}>
-                    <iframe
-                        className={`${styles.iogearProductPageVideo} rounded-4`}
-                        height="440"
-                        width="780"
-                        src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
-                        autoplay='true'
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer;
-                            autoplay;
-                            fullscreen;
-                            clipboard-write;
-                            encrypted-media;
-                            gyroscope;
-                            picture-in-picture;
-                            web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    >
-                    </iframe>
+                        <iframe
+                            className={`${styles.iogearProductPageVideo} rounded-4`}
+                            height="440"
+                            width="780"
+                            src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
+                            autoplay='true'
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer;
+                                autoplay;
+                                fullscreen;
+                                clipboard-write;
+                                encrypted-media;
+                                gyroscope;
+                                picture-in-picture;
+                                web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        >
+                        </iframe>
                     </div>
                 }
+                
                 {/* {!isMobile &&
                     <Carousel className={styles.projectCarousel} variant='dark'>
                         {renderShadleCarouselItems}
                     </Carousel>
                 } */}
             </div>
+
+            {/* // ! IOGEAR CES 2024 */}
+
+            <div className={styles.carouselWrapperDiv}>
+                {isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://support.iogear.com/ces2024' target='_blank' className={styles.peakSyncLink}>Iogear CES 2024 Landing Page</Link></h2>}
+                <iframe 
+                    className={`${styles.iogearProductPageVideo} rounded-4`}
+                    width="780"
+                    height="440"
+                    src="https://www.youtube.com/embed/qM6FeC_LKWc?si=f0SdyXVPem4_Go7S&controls=0&autoplay=1&loop=1&playlist=qM6FeC_LKWc&mute=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow=
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    >    
+                    </iframe>
+                <div className={styles.peakSyncDescriptionDiv}>
+                {!isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://support.iogear.com/ces2024' target='_blank' className={styles.peakSyncLink}>Iogear CES 2024 Landing Page</Link></h2>}
+                    <br></br>
+                    <p className={styles.peakSyncDescription}>With Iogear's participation in <Link href='https://www.ces.tech/' target='_blank' className={styles.iogearProductLink}>CES</Link> 2024, I created a landing page for Iogear customers.  Here they can learn about various products and offerings, as well as RSVP directly to Iogear.</p>
+                    <p className={styles.peakSyncDescription}>With a design from the marketing team, I built the front-end with HTML, CSS, Bootstrap, and JQuery.
+                    For the back-end I used PHP and MySQL to fetch product data, store RSVP data, and send confirmation emails to customers.</p>
+                    <br></br>
+                    <div className={styles.peakSyncTechUsedDiv}>
+                        {renderTechUsed(iogearCes2024TechUsedArr.slice(0, 4))}
+                        <br></br>
+                        {renderTechUsed(iogearCes2024TechUsedArr.slice(4, 6))}
+                    </div>
+                </div>
+            </div>
+
+
+            {/* //! Shadle */}
+
             <div className={styles.carouselWrapperDiv}>
                 <div className={styles.codifyDescriptionDiv}>
                 <h2 className={styles.codifyLink}> <Link href='https://shadle.web.app/' target='_blank' className={styles.codifyLink}>Shadle</Link></h2>
