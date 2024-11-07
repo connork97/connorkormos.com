@@ -162,9 +162,9 @@ const Projects = forwardRef(({ projectsRef }) => {
                                 height="440"
                                 width="780"
                                 src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
-                                autoplay='true'
+                                autoPlay={true}
                                 title="YouTube video player"
-                                frameborder="0"
+                                // frameBorder="0"
                                 allow="accelerometer;
                                     autoplay;
                                     fullscreen;
@@ -173,8 +173,8 @@ const Projects = forwardRef(({ projectsRef }) => {
                                     gyroscope;
                                     picture-in-picture;
                                     web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                // allowfullscreen
                             >
                             </iframe>
                         </div>
@@ -203,9 +203,9 @@ const Projects = forwardRef(({ projectsRef }) => {
                             height="440"
                             width="780"
                             src="https://www.youtube.com/embed/Y2mbtqOSgXk?si=4eqHnyrl1Xz5d2w3&controls=0&autoplay=1&loop=1&playlist=Y2mbtqOSgXk&mute=1"
-                            autoplay='true'
+                            autoPlay={true}
                             title="YouTube video player"
-                            frameborder="0"
+                            frameBorder="0"
                             allow="accelerometer;
                                 autoplay;
                                 fullscreen;
@@ -214,8 +214,8 @@ const Projects = forwardRef(({ projectsRef }) => {
                                 gyroscope;
                                 picture-in-picture;
                                 web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            // allowfullscreen
                         >
                         </iframe>
                     </div>
@@ -238,9 +238,10 @@ const Projects = forwardRef(({ projectsRef }) => {
                     height="440"
                     src="https://www.youtube.com/embed/qM6FeC_LKWc?si=f0SdyXVPem4_Go7S&controls=0&autoplay=1&loop=1&playlist=qM6FeC_LKWc&mute=1"
                     title="YouTube video player"
-                    frameborder="0"
+                    // frameBorder="0"
                     allow=
-                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" 
+                        // allowfullscreen
                     >    
                     </iframe>
                 <div className={styles.peakSyncDescriptionDiv}>
