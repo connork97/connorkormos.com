@@ -157,7 +157,21 @@ const Projects = forwardRef(({ projectsRef }) => {
                     <br></br>
                      {isMobile && 
                         <div className={styles.projectVideoWrapperDiv}>
-                            <iframe
+                            <video
+                                className={`${styles.iogearProductPageVideo} rounded-4`}
+                                height="440"
+                                width="780"
+                                controls={false}
+                                autoPlay
+                                loop
+                                muted
+                                preload="auto"
+                                src='/iogear/iogear_product_pages.mp4'
+                            >
+                                {/* <source src="/iogear/your-video-file.mp4" type="video/mp4" /> */}
+                                Your browser does not support the video tag.
+                            </video>
+                            {/* <iframe
                                 className={`${styles.iogearProductPageVideo} rounded-4`}
                                 height="440"
                                 width="780"
@@ -176,7 +190,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 // allowfullscreen
                             >
-                            </iframe>
+                            </iframe> */}
                         </div>
                     }
                     <p className={styles.codifyDescription}>A few examples of projects I have worked on during my time with <a href='https://support.iogear.com/' target='blank' style={{color: 'black'}}>Iogear</a>.
@@ -198,7 +212,21 @@ const Projects = forwardRef(({ projectsRef }) => {
                 </div>
                 {!isMobile &&
                     <div className={styles.projectVideoWrapperDiv}>
-                        <iframe
+                        <video
+                            className={`${styles.iogearProductPageVideo} rounded-4`}
+                            height="440"
+                            width="780"
+                            controls={false}
+                            autoPlay
+                            loop
+                            muted
+                            preload="auto"
+                            src='/iogear/iogear_product_pages.mp4'
+                        >
+                            {/* <source src="/iogear/your-video-file.mp4" type="video/mp4" /> */}
+                            Your browser does not support the video tag.
+                        </video>
+                        {/* <iframe
                             className={`${styles.iogearProductPageVideo} rounded-4`}
                             height="440"
                             width="780"
@@ -217,7 +245,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                             referrerPolicy="strict-origin-when-cross-origin"
                             // allowfullscreen
                         >
-                        </iframe>
+                        </iframe> */}
                     </div>
                 }
                 
@@ -232,7 +260,21 @@ const Projects = forwardRef(({ projectsRef }) => {
 
             <div className={styles.carouselWrapperDiv}>
                 {isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://support.iogear.com/ces2024' target='_blank' className={styles.peakSyncLink}>Iogear CES 2024 Landing Page</Link></h2>}
-                <iframe 
+                <video
+                    className={`${styles.iogearProductPageVideo} rounded-4`}
+                    height="440"
+                    width="780"
+                    controls={false}
+                    autoPlay
+                    loop
+                    muted
+                    preload="auto"
+                    src='/iogear/iogear_ces_2024.mp4'
+                >
+                    {/* <source src="/iogear/your-video-file.mp4" type="video/mp4" /> */}
+                    Your browser does not support the video tag.
+                </video>
+                {/* <iframe 
                     className={`${styles.iogearProductPageVideo} rounded-4`}
                     width="780"
                     height="440"
@@ -243,7 +285,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" 
                         // allowfullscreen
                     >    
-                    </iframe>
+                    </iframe> */}
                 <div className={styles.peakSyncDescriptionDiv}>
                 {!isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://support.iogear.com/ces2024' target='_blank' className={styles.peakSyncLink}>Iogear CES 2024 Landing Page</Link></h2>}
                     <br></br>
