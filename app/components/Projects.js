@@ -289,7 +289,7 @@ const Projects = forwardRef(({ projectsRef }) => {
                 <div className={styles.peakSyncDescriptionDiv}>
                 {!isMobile && <h2 className={styles.peakSyncLink}> <Link href='https://support.iogear.com/ces2024' target='_blank' className={styles.peakSyncLink}>Iogear CES 2024 Landing Page</Link></h2>}
                     <br></br>
-                    <p className={styles.peakSyncDescription}>With Iogear's participation in <Link href='https://www.ces.tech/' target='_blank' className={styles.iogearProductLink}>CES</Link> 2024, I created a landing page for Iogear customers.  Here they can learn about various products and offerings, as well as RSVP directly to Iogear.</p>
+                    <p className={styles.peakSyncDescription}>With Iogear&apos;s participation in <Link href='https://www.ces.tech/' target='_blank' className={styles.iogearProductLink}>CES</Link> 2024, I created a landing page for Iogear customers.  Here they can learn about various products and offerings, as well as RSVP directly to Iogear.</p>
                     <p className={styles.peakSyncDescription}>With a design from the marketing team, I built the front-end with HTML, CSS, Bootstrap, and JQuery.
                     For the back-end I used PHP and MySQL to fetch product data, store RSVP data, and send confirmation emails to customers.</p>
                     <br></br>
